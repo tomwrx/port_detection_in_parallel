@@ -3,6 +3,10 @@ import multiprocessing as mp
 
 
 def preprocess_chunk(chunk: pd.DataFrame) -> pd.DataFrame:
+    """
+    Preprocesses a single chunk of AIS data: drops NaNs, duplicates,
+    converts timestamp, and filters by SOG.
+    """
     chunk = chunk.dropna().drop_duplicates()
     chunk["Timestamp"] = pd.to_datetime(
         chunk["# Timestamp"], dayfirst=True, errors="coerce"
@@ -15,6 +19,9 @@ def preprocess_chunk(chunk: pd.DataFrame) -> pd.DataFrame:
 def load_and_preprocess_data_parallel(
     csv_path: str = None, num_processes: int = None
 ) -> pd.DataFrame:
+    """
+    Loads and preprocesses AIS data from a CSV file in parallel using multiple processes.
+    """
     if num_processes is None:
         num_processes = mp.cpu_count()
 

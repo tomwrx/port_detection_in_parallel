@@ -164,6 +164,9 @@ def cluster_stops_dbscan(
     eps_rad: float,
     min_samples: int,
 ) -> pd.DataFrame:
+    """
+    Clusters stop events using DBSCAN based on their geographical coordinates.
+    """
     if stops_df.empty:
         print("Stops DataFrame is empty. No clustering performed.")
         stops_df["cluster"] = (
@@ -193,12 +196,19 @@ def cluster_stops_dbscan(
     return stops_df
 
 
-def get_ship_type_distribution(series):
+def get_ship_type_distribution(series: pd.Series) -> str:
+    """ "
+    Returns a string summarizing the distribution of ship types in a Series.
+    """
     counts = series.value_counts()
     return ", ".join([f"{ship_type}: {count}" for ship_type, count in counts.items()])
 
 
-def create_cluster_summary_df(clustered_stops_df):
+def create_cluster_summary_df(clustered_stops_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Creates a summary DataFrame of clusters from the clustered stops DataFrame.
+    The summary includes centroid coordinates, number of unique ships, average and total stop duration.
+    """
     if "cluster" not in clustered_stops_df.columns:
         print("Error: 'cluster' column not found in clustered_stops_df.")
         return pd.DataFrame()
