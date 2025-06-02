@@ -1,0 +1,4011 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a785d152c79ca6c11025979a2f299403 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a785d152c79ca6c11025979a2f299403" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a785d152c79ca6c11025979a2f299403 = L.map(
+                "map_a785d152c79ca6c11025979a2f299403",
+                {
+                    center: [55.900943558023926, 11.091040598100683],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_790f8fa0345939af1e0f749c88de8dc1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_790f8fa0345939af1e0f749c88de8dc1.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_5a4d5e5f6ccad24357257d98d6d32576_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_5a4d5e5f6ccad24357257d98d6d32576_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5a4d5e5f6ccad24357257d98d6d32576 = L.geoJson(null, {
+                onEachFeature: geo_json_5a4d5e5f6ccad24357257d98d6d32576_onEachFeature,
+            
+                style: geo_json_5a4d5e5f6ccad24357257d98d6d32576_styler,
+            ...{
+}
+        });
+
+        function geo_json_5a4d5e5f6ccad24357257d98d6d32576_add (data) {
+            geo_json_5a4d5e5f6ccad24357257d98d6d32576
+                .addData(data);
+        }
+            geo_json_5a4d5e5f6ccad24357257d98d6d32576_add({"features": [{"geometry": {"coordinates": [[[8.47878507784431, 55.44765898003994], [8.45739494347241, 55.451306388515036], [8.429422181315719, 55.45738380021569], [8.41381387172414, 55.476177969655176], [8.412573433628319, 55.47773616371682], [8.40994789747004, 55.48170805858855], [8.410451548672567, 55.482822920353975], [8.410497984520124, 55.482836882352935], [8.419955058741259, 55.47902988951049], [8.478287455259027, 55.4531051067504], [8.480598651821861, 55.45145840890689], [8.47878507784431, 55.44765898003994]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5a4d5e5f6ccad24357257d98d6d32576.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 0<br>
+                    <b>Unique Ships:</b> 79<br>
+                    <b>Avg. Duration (h):</b> 15.5<br>
+                    <b>Total Stops:</b> 105
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_5a4d5e5f6ccad24357257d98d6d32576.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_e382d0334ca38b2540cbb543849449e9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_e382d0334ca38b2540cbb543849449e9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e382d0334ca38b2540cbb543849449e9 = L.geoJson(null, {
+                onEachFeature: geo_json_e382d0334ca38b2540cbb543849449e9_onEachFeature,
+            
+                style: geo_json_e382d0334ca38b2540cbb543849449e9_styler,
+            ...{
+}
+        });
+
+        function geo_json_e382d0334ca38b2540cbb543849449e9_add (data) {
+            geo_json_e382d0334ca38b2540cbb543849449e9
+                .addData(data);
+        }
+            geo_json_e382d0334ca38b2540cbb543849449e9_add({"features": [{"geometry": {"coordinates": [[[11.366261695592286, 54.62967596969697], [11.357963145170965, 54.63176682783443], [11.35856691862734, 54.63982892011936], [11.379672222426246, 54.642346996694826], [11.3865234037123, 54.6377883549884], [11.387675999999999, 54.63660278461539], [11.385956136781608, 54.63546906436782], [11.366261695592286, 54.62967596969697]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e382d0334ca38b2540cbb543849449e9.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 1<br>
+                    <b>Unique Ships:</b> 23<br>
+                    <b>Avg. Duration (h):</b> 13.9<br>
+                    <b>Total Stops:</b> 32
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e382d0334ca38b2540cbb543849449e9.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_8f596e966dd3ec9a174addb2aaaba6fe_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_8f596e966dd3ec9a174addb2aaaba6fe_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8f596e966dd3ec9a174addb2aaaba6fe = L.geoJson(null, {
+                onEachFeature: geo_json_8f596e966dd3ec9a174addb2aaaba6fe_onEachFeature,
+            
+                style: geo_json_8f596e966dd3ec9a174addb2aaaba6fe_styler,
+            ...{
+}
+        });
+
+        function geo_json_8f596e966dd3ec9a174addb2aaaba6fe_add (data) {
+            geo_json_8f596e966dd3ec9a174addb2aaaba6fe
+                .addData(data);
+        }
+            geo_json_8f596e966dd3ec9a174addb2aaaba6fe_add({"features": [{"geometry": {"coordinates": [[[14.691848770000002, 55.08733706857142], [14.680469428571428, 55.092158285714284], [14.693034113166485, 55.10489662350381], [14.696489673825504, 55.098524209395976], [14.695529333863274, 55.0942345691574], [14.691848770000002, 55.08733706857142]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8f596e966dd3ec9a174addb2aaaba6fe.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 2<br>
+                    <b>Unique Ships:</b> 22<br>
+                    <b>Avg. Duration (h):</b> 15.9<br>
+                    <b>Total Stops:</b> 29
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8f596e966dd3ec9a174addb2aaaba6fe.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_4f2abd75c0ce475d686fe4c345eb3b80_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_4f2abd75c0ce475d686fe4c345eb3b80_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4f2abd75c0ce475d686fe4c345eb3b80 = L.geoJson(null, {
+                onEachFeature: geo_json_4f2abd75c0ce475d686fe4c345eb3b80_onEachFeature,
+            
+                style: geo_json_4f2abd75c0ce475d686fe4c345eb3b80_styler,
+            ...{
+}
+        });
+
+        function geo_json_4f2abd75c0ce475d686fe4c345eb3b80_add (data) {
+            geo_json_4f2abd75c0ce475d686fe4c345eb3b80
+                .addData(data);
+        }
+            geo_json_4f2abd75c0ce475d686fe4c345eb3b80_add({"features": [{"geometry": {"coordinates": [[[13.161330990610328, 55.36438649765258], [13.153615724137934, 55.36589859770115], [13.143612767857144, 55.372466625], [13.14494790781338, 55.37289278133782], [13.154720228415302, 55.37056716174864], [13.161876754335262, 55.36442428901734], [13.161428739811912, 55.36438681504702], [13.161330990610328, 55.36438649765258]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4f2abd75c0ce475d686fe4c345eb3b80.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 3<br>
+                    <b>Unique Ships:</b> 16<br>
+                    <b>Avg. Duration (h):</b> 5.0<br>
+                    <b>Total Stops:</b> 25
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_4f2abd75c0ce475d686fe4c345eb3b80.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_070fbcfdf3cef371dd5ed9108cbc4e48_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_070fbcfdf3cef371dd5ed9108cbc4e48_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_070fbcfdf3cef371dd5ed9108cbc4e48 = L.geoJson(null, {
+                onEachFeature: geo_json_070fbcfdf3cef371dd5ed9108cbc4e48_onEachFeature,
+            
+                style: geo_json_070fbcfdf3cef371dd5ed9108cbc4e48_styler,
+            ...{
+}
+        });
+
+        function geo_json_070fbcfdf3cef371dd5ed9108cbc4e48_add (data) {
+            geo_json_070fbcfdf3cef371dd5ed9108cbc4e48
+                .addData(data);
+        }
+            geo_json_070fbcfdf3cef371dd5ed9108cbc4e48_add({"features": [{"geometry": {"coordinates": [[[11.131093053571428, 55.327354982142865], [11.130975172413795, 55.32739987931034], [11.13075419581958, 55.32756048624863], [11.126892504322766, 55.330434402017296], [11.126358220614827, 55.33103844665461], [11.126061336826346, 55.331670550898195], [11.134303119908767, 55.33345083121538], [11.137877090497739, 55.33312853544494], [11.143577422843254, 55.33254694775212], [11.131093053571428, 55.327354982142865]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_070fbcfdf3cef371dd5ed9108cbc4e48.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 4<br>
+                    <b>Unique Ships:</b> 21<br>
+                    <b>Avg. Duration (h):</b> 16.6<br>
+                    <b>Total Stops:</b> 27
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_070fbcfdf3cef371dd5ed9108cbc4e48.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_a78baf79e7222670c5ada30ba2fedb33_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_a78baf79e7222670c5ada30ba2fedb33_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a78baf79e7222670c5ada30ba2fedb33 = L.geoJson(null, {
+                onEachFeature: geo_json_a78baf79e7222670c5ada30ba2fedb33_onEachFeature,
+            
+                style: geo_json_a78baf79e7222670c5ada30ba2fedb33_styler,
+            ...{
+}
+        });
+
+        function geo_json_a78baf79e7222670c5ada30ba2fedb33_add (data) {
+            geo_json_a78baf79e7222670c5ada30ba2fedb33
+                .addData(data);
+        }
+            geo_json_a78baf79e7222670c5ada30ba2fedb33_add({"features": [{"geometry": {"coordinates": [[[8.567912584375, 55.085650690624995], [8.567876547692308, 55.08567143076923], [8.56539920915725, 55.08711999340866], [8.56504552657005, 55.08789152898551], [8.565738339486252, 55.08847066761327], [8.566592556519552, 55.08861423223941], [8.570791166666666, 55.087227672364676], [8.570829185686655, 55.086329829787225], [8.570816763565892, 55.08631295736434], [8.567912584375, 55.085650690624995]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a78baf79e7222670c5ada30ba2fedb33.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 5<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 13.3<br>
+                    <b>Total Stops:</b> 11
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_a78baf79e7222670c5ada30ba2fedb33.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a = L.geoJson(null, {
+                onEachFeature: geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a_onEachFeature,
+            
+                style: geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a_styler,
+            ...{
+}
+        });
+
+        function geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a_add (data) {
+            geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a
+                .addData(data);
+        }
+            geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a_add({"features": [{"geometry": {"coordinates": [[[13.825471791411044, 55.42073030981596], [13.8128947, 55.42649733333334], [13.812905791366907, 55.4265021294964], [13.823589044425088, 55.426178228222994], [13.826037638888888, 55.42463857986112], [13.826688409200967, 55.42110560774819], [13.825471791411044, 55.42073030981596]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 6<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 6.9<br>
+                    <b>Total Stops:</b> 8
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8fad03ea849e25dcc2e3e1911ee9ff4a.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_cf046c0463e5764ea1b24860a0215683_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_cf046c0463e5764ea1b24860a0215683_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_cf046c0463e5764ea1b24860a0215683 = L.geoJson(null, {
+                onEachFeature: geo_json_cf046c0463e5764ea1b24860a0215683_onEachFeature,
+            
+                style: geo_json_cf046c0463e5764ea1b24860a0215683_styler,
+            ...{
+}
+        });
+
+        function geo_json_cf046c0463e5764ea1b24860a0215683_add (data) {
+            geo_json_cf046c0463e5764ea1b24860a0215683
+                .addData(data);
+        }
+            geo_json_cf046c0463e5764ea1b24860a0215683_add({"features": [{"geometry": {"coordinates": [[[12.186589233449476, 55.453714885017426], [12.186574666666667, 55.45376711111111], [12.19331156097561, 55.469973170731706], [12.195243686379929, 55.47216583870968], [12.205108500732063, 55.462750380673505], [12.203494819148938, 55.458555478723405], [12.197193932394365, 55.4555138084507], [12.186589233449476, 55.453714885017426]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_cf046c0463e5764ea1b24860a0215683.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 7<br>
+                    <b>Unique Ships:</b> 11<br>
+                    <b>Avg. Duration (h):</b> 6.8<br>
+                    <b>Total Stops:</b> 17
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_cf046c0463e5764ea1b24860a0215683.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_f4005edaf81016bbb7ffee32e1b094aa_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_f4005edaf81016bbb7ffee32e1b094aa_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f4005edaf81016bbb7ffee32e1b094aa = L.geoJson(null, {
+                onEachFeature: geo_json_f4005edaf81016bbb7ffee32e1b094aa_onEachFeature,
+            
+                style: geo_json_f4005edaf81016bbb7ffee32e1b094aa_styler,
+            ...{
+}
+        });
+
+        function geo_json_f4005edaf81016bbb7ffee32e1b094aa_add (data) {
+            geo_json_f4005edaf81016bbb7ffee32e1b094aa
+                .addData(data);
+        }
+            geo_json_f4005edaf81016bbb7ffee32e1b094aa_add({"features": [{"geometry": {"coordinates": [[[12.242889754540867, 57.108695643920285], [12.22615784126984, 57.11787058730158], [12.235659721283783, 57.1176289543919], [12.237478741710296, 57.117328006980806], [12.245118745110215, 57.109967373486484], [12.2450795, 57.1097515], [12.245071714285716, 57.109736885714284], [12.242889754540867, 57.108695643920285]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f4005edaf81016bbb7ffee32e1b094aa.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 8<br>
+                    <b>Unique Ships:</b> 11<br>
+                    <b>Avg. Duration (h):</b> 12.4<br>
+                    <b>Total Stops:</b> 15
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f4005edaf81016bbb7ffee32e1b094aa.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_d95a442748d9bffb2e52e6144196a776_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_d95a442748d9bffb2e52e6144196a776_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d95a442748d9bffb2e52e6144196a776 = L.geoJson(null, {
+                onEachFeature: geo_json_d95a442748d9bffb2e52e6144196a776_onEachFeature,
+            
+                style: geo_json_d95a442748d9bffb2e52e6144196a776_styler,
+            ...{
+}
+        });
+
+        function geo_json_d95a442748d9bffb2e52e6144196a776_add (data) {
+            geo_json_d95a442748d9bffb2e52e6144196a776
+                .addData(data);
+        }
+            geo_json_d95a442748d9bffb2e52e6144196a776_add({"features": [{"geometry": {"coordinates": [[[10.529903864406778, 55.46855567796611], [10.530096316602316, 55.46892026254827], [10.535196150652432, 55.47306144483986], [10.543138980116959, 55.47813404327484], [10.543156828475334, 55.47814103475336], [10.548492013554217, 55.47796957304216], [10.538461951893895, 55.469628003933906], [10.529903864406778, 55.46855567796611]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d95a442748d9bffb2e52e6144196a776.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 9<br>
+                    <b>Unique Ships:</b> 14<br>
+                    <b>Avg. Duration (h):</b> 15.4<br>
+                    <b>Total Stops:</b> 16
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_d95a442748d9bffb2e52e6144196a776.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_701a73651dade81b12cb7e82caa70c3e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_701a73651dade81b12cb7e82caa70c3e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_701a73651dade81b12cb7e82caa70c3e = L.geoJson(null, {
+                onEachFeature: geo_json_701a73651dade81b12cb7e82caa70c3e_onEachFeature,
+            
+                style: geo_json_701a73651dade81b12cb7e82caa70c3e_styler,
+            ...{
+}
+        });
+
+        function geo_json_701a73651dade81b12cb7e82caa70c3e_add (data) {
+            geo_json_701a73651dade81b12cb7e82caa70c3e
+                .addData(data);
+        }
+            geo_json_701a73651dade81b12cb7e82caa70c3e_add({"features": [{"geometry": {"coordinates": [[[12.09698951396648, 54.14197820670391], [12.093030624999999, 54.153930656250004], [12.0941559, 54.1605946], [12.120121893617021, 54.15896977304965], [12.124089647058824, 54.15804839705883], [12.121828863636363, 54.15299377272727], [12.09698951396648, 54.14197820670391]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_701a73651dade81b12cb7e82caa70c3e.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 10<br>
+                    <b>Unique Ships:</b> 14<br>
+                    <b>Avg. Duration (h):</b> 3.6<br>
+                    <b>Total Stops:</b> 25
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_701a73651dade81b12cb7e82caa70c3e.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_e27424b37b3ec8ba1f0be998a9e60a60_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_e27424b37b3ec8ba1f0be998a9e60a60_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e27424b37b3ec8ba1f0be998a9e60a60 = L.geoJson(null, {
+                onEachFeature: geo_json_e27424b37b3ec8ba1f0be998a9e60a60_onEachFeature,
+            
+                style: geo_json_e27424b37b3ec8ba1f0be998a9e60a60_styler,
+            ...{
+}
+        });
+
+        function geo_json_e27424b37b3ec8ba1f0be998a9e60a60_add (data) {
+            geo_json_e27424b37b3ec8ba1f0be998a9e60a60
+                .addData(data);
+        }
+            geo_json_e27424b37b3ec8ba1f0be998a9e60a60_add({"features": [{"geometry": {"coordinates": [[[8.294645742087543, 54.758408554208756], [8.294499230574326, 54.758454371621625], [8.294693995963092, 54.75877315167243], [8.294732286868689, 54.7588353010101], [8.299615524215419, 54.75945168035645], [8.294645742087543, 54.758408554208756]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e27424b37b3ec8ba1f0be998a9e60a60.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 11<br>
+                    <b>Unique Ships:</b> 5<br>
+                    <b>Avg. Duration (h):</b> 7.0<br>
+                    <b>Total Stops:</b> 11
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e27424b37b3ec8ba1f0be998a9e60a60.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b = L.geoJson(null, {
+                onEachFeature: geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b_onEachFeature,
+            
+                style: geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b_styler,
+            ...{
+}
+        });
+
+        function geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b_add (data) {
+            geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b
+                .addData(data);
+        }
+            geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b_add({"features": [{"geometry": {"coordinates": [[[9.036510751035783, 54.46949058505963], [9.026306057581575, 54.47272543761995], [9.043328442857144, 54.47390546428571], [9.044680757763976, 54.473603498964806], [9.04516128976035, 54.473459577342055], [9.04613734375, 54.473034250000005], [9.036510751035783, 54.46949058505963]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 12<br>
+                    <b>Unique Ships:</b> 18<br>
+                    <b>Avg. Duration (h):</b> 11.4<br>
+                    <b>Total Stops:</b> 31
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_cbc8408ff8f5d4f7bfe2e862a2c0209b.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_28b123b03c36db802407df58199c18ac_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_28b123b03c36db802407df58199c18ac_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_28b123b03c36db802407df58199c18ac = L.geoJson(null, {
+                onEachFeature: geo_json_28b123b03c36db802407df58199c18ac_onEachFeature,
+            
+                style: geo_json_28b123b03c36db802407df58199c18ac_styler,
+            ...{
+}
+        });
+
+        function geo_json_28b123b03c36db802407df58199c18ac_add (data) {
+            geo_json_28b123b03c36db802407df58199c18ac
+                .addData(data);
+        }
+            geo_json_28b123b03c36db802407df58199c18ac_add({"features": [{"geometry": {"coordinates": [[[8.571618, 54.691474870967745], [8.57161026153846, 54.69151747692308], [8.572302880452343, 54.692479820678514], [8.573325853395914, 54.69286404748757], [8.576409781420764, 54.6931770737705], [8.577435711538461, 54.69264998076923], [8.571618, 54.691474870967745]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_28b123b03c36db802407df58199c18ac.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 13<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 7.7<br>
+                    <b>Total Stops:</b> 14
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_28b123b03c36db802407df58199c18ac.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f = L.geoJson(null, {
+                onEachFeature: geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f_onEachFeature,
+            
+                style: geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f_styler,
+            ...{
+}
+        });
+
+        function geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f_add (data) {
+            geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f
+                .addData(data);
+        }
+            geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f_add({"features": [{"geometry": {"coordinates": [[[10.259119192546583, 54.94160134161491], [10.256148647515529, 54.942178849378884], [10.256393498269896, 54.94314216608997], [10.259795325925925, 54.942423318518514], [10.25958798851015, 54.94173487552663], [10.259119192546583, 54.94160134161491]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 14<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 10.4<br>
+                    <b>Total Stops:</b> 15
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0d0ec8ed39b5ac4410b5c18ddfb8a21f.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_01270cbce38ff2c551901a59fec64ea6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_01270cbce38ff2c551901a59fec64ea6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_01270cbce38ff2c551901a59fec64ea6 = L.geoJson(null, {
+                onEachFeature: geo_json_01270cbce38ff2c551901a59fec64ea6_onEachFeature,
+            
+                style: geo_json_01270cbce38ff2c551901a59fec64ea6_styler,
+            ...{
+}
+        });
+
+        function geo_json_01270cbce38ff2c551901a59fec64ea6_add (data) {
+            geo_json_01270cbce38ff2c551901a59fec64ea6
+                .addData(data);
+        }
+            geo_json_01270cbce38ff2c551901a59fec64ea6_add({"features": [{"geometry": {"coordinates": [[[12.466576348214288, 54.95177698660715], [12.4655432375, 54.952522275], [12.468447799093344, 54.95453338409231], [12.466588421052633, 54.951787160664814], [12.466576348214288, 54.95177698660715]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_01270cbce38ff2c551901a59fec64ea6.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 15<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 11.1<br>
+                    <b>Total Stops:</b> 11
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_01270cbce38ff2c551901a59fec64ea6.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_e2d52535b81891e72d6273945770d936_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_e2d52535b81891e72d6273945770d936_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e2d52535b81891e72d6273945770d936 = L.geoJson(null, {
+                onEachFeature: geo_json_e2d52535b81891e72d6273945770d936_onEachFeature,
+            
+                style: geo_json_e2d52535b81891e72d6273945770d936_styler,
+            ...{
+}
+        });
+
+        function geo_json_e2d52535b81891e72d6273945770d936_add (data) {
+            geo_json_e2d52535b81891e72d6273945770d936
+                .addData(data);
+        }
+            geo_json_e2d52535b81891e72d6273945770d936_add({"features": [{"geometry": {"coordinates": [[[9.454069622073577, 54.80918338015607], [9.452593129251701, 54.811074918367346], [9.452688717948718, 54.81114773333333], [9.452739054545454, 54.81116461818183], [9.454614022197557, 54.81033616870145], [9.454069622073577, 54.80918338015607]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e2d52535b81891e72d6273945770d936.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 16<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 12.3<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e2d52535b81891e72d6273945770d936.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_9845493d1335d48de7c6549064bf7141_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_9845493d1335d48de7c6549064bf7141_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_9845493d1335d48de7c6549064bf7141 = L.geoJson(null, {
+                onEachFeature: geo_json_9845493d1335d48de7c6549064bf7141_onEachFeature,
+            
+                style: geo_json_9845493d1335d48de7c6549064bf7141_styler,
+            ...{
+}
+        });
+
+        function geo_json_9845493d1335d48de7c6549064bf7141_add (data) {
+            geo_json_9845493d1335d48de7c6549064bf7141
+                .addData(data);
+        }
+            geo_json_9845493d1335d48de7c6549064bf7141_add({"features": [{"geometry": {"coordinates": [[[10.614971336605892, 55.05566352454417], [10.614715154362417, 55.057682083892615], [10.614703427318295, 55.06142480576441], [10.617123938123754, 55.06242931337326], [10.621229792750825, 55.06027886081127], [10.620634200913242, 55.058566505707766], [10.620041835971222, 55.05809378705037], [10.614971336605892, 55.05566352454417]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_9845493d1335d48de7c6549064bf7141.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 17<br>
+                    <b>Unique Ships:</b> 29<br>
+                    <b>Avg. Duration (h):</b> 17.8<br>
+                    <b>Total Stops:</b> 31
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_9845493d1335d48de7c6549064bf7141.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_31851b13da4888c4aacd126a165451b9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_31851b13da4888c4aacd126a165451b9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_31851b13da4888c4aacd126a165451b9 = L.geoJson(null, {
+                onEachFeature: geo_json_31851b13da4888c4aacd126a165451b9_onEachFeature,
+            
+                style: geo_json_31851b13da4888c4aacd126a165451b9_styler,
+            ...{
+}
+        });
+
+        function geo_json_31851b13da4888c4aacd126a165451b9_add (data) {
+            geo_json_31851b13da4888c4aacd126a165451b9
+                .addData(data);
+        }
+            geo_json_31851b13da4888c4aacd126a165451b9_add({"features": [{"geometry": {"coordinates": [[[12.116565099999999, 54.172907450000004], [12.116560676470588, 54.17290747058824], [12.1165592, 54.17290893333333], [12.119927481481481, 54.175693074074076], [12.119952666666666, 54.17569822222222], [12.120625347826087, 54.175036695652175], [12.120628428571427, 54.17503299999999], [12.116565099999999, 54.172907450000004]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_31851b13da4888c4aacd126a165451b9.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 18<br>
+                    <b>Unique Ships:</b> 3<br>
+                    <b>Avg. Duration (h):</b> 2.5<br>
+                    <b>Total Stops:</b> 13
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_31851b13da4888c4aacd126a165451b9.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_50e1b44ce0d855c6abbe9980165384ff_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_50e1b44ce0d855c6abbe9980165384ff_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_50e1b44ce0d855c6abbe9980165384ff = L.geoJson(null, {
+                onEachFeature: geo_json_50e1b44ce0d855c6abbe9980165384ff_onEachFeature,
+            
+                style: geo_json_50e1b44ce0d855c6abbe9980165384ff_styler,
+            ...{
+}
+        });
+
+        function geo_json_50e1b44ce0d855c6abbe9980165384ff_add (data) {
+            geo_json_50e1b44ce0d855c6abbe9980165384ff
+                .addData(data);
+        }
+            geo_json_50e1b44ce0d855c6abbe9980165384ff_add({"features": [{"geometry": {"coordinates": [[[11.086548089473684, 55.664336652631576], [11.076318061279766, 55.665141272091184], [11.08265689460371, 55.67737976960371], [11.10073766034755, 55.676209120063184], [11.10180532089552, 55.67609043134328], [11.101970901296829, 55.675815202089325], [11.102514649484537, 55.674573309278344], [11.096571444852941, 55.66703866176471], [11.086548089473684, 55.664336652631576]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_50e1b44ce0d855c6abbe9980165384ff.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 19<br>
+                    <b>Unique Ships:</b> 19<br>
+                    <b>Avg. Duration (h):</b> 13.3<br>
+                    <b>Total Stops:</b> 24
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_50e1b44ce0d855c6abbe9980165384ff.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_32fbc264214589e0cab0f46e73b5d162_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_32fbc264214589e0cab0f46e73b5d162_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_32fbc264214589e0cab0f46e73b5d162 = L.geoJson(null, {
+                onEachFeature: geo_json_32fbc264214589e0cab0f46e73b5d162_onEachFeature,
+            
+                style: geo_json_32fbc264214589e0cab0f46e73b5d162_styler,
+            ...{
+}
+        });
+
+        function geo_json_32fbc264214589e0cab0f46e73b5d162_add (data) {
+            geo_json_32fbc264214589e0cab0f46e73b5d162
+                .addData(data);
+        }
+            geo_json_32fbc264214589e0cab0f46e73b5d162_add({"features": [{"geometry": {"coordinates": [[[11.844546594882729, 55.96074988486141], [11.843313147089948, 55.96360745079365], [11.843267655660378, 55.96645432861635], [11.844567857142858, 55.966200534749035], [11.845862907990314, 55.96537306174334], [11.848017174692874, 55.96347691216216], [11.847832111824886, 55.96316954580061], [11.844546594882729, 55.96074988486141]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_32fbc264214589e0cab0f46e73b5d162.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 20<br>
+                    <b>Unique Ships:</b> 15<br>
+                    <b>Avg. Duration (h):</b> 16.3<br>
+                    <b>Total Stops:</b> 18
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_32fbc264214589e0cab0f46e73b5d162.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_a49afbd09466c30f8bce7e082a6d7166_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_a49afbd09466c30f8bce7e082a6d7166_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a49afbd09466c30f8bce7e082a6d7166 = L.geoJson(null, {
+                onEachFeature: geo_json_a49afbd09466c30f8bce7e082a6d7166_onEachFeature,
+            
+                style: geo_json_a49afbd09466c30f8bce7e082a6d7166_styler,
+            ...{
+}
+        });
+
+        function geo_json_a49afbd09466c30f8bce7e082a6d7166_add (data) {
+            geo_json_a49afbd09466c30f8bce7e082a6d7166
+                .addData(data);
+        }
+            geo_json_a49afbd09466c30f8bce7e082a6d7166_add({"features": [{"geometry": {"coordinates": [[[11.787624441690962, 57.59636634548105], [11.787323935408466, 57.59640656213091], [11.787919985010705, 57.59686070021414], [11.790752374999999, 57.59867516666667], [11.793829958333333, 57.599376041666666], [11.7938395, 57.599356241666676], [11.793656266666666, 57.598513000000004], [11.787624441690962, 57.59636634548105]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a49afbd09466c30f8bce7e082a6d7166.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 21<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 8.9<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_a49afbd09466c30f8bce7e082a6d7166.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63 = L.geoJson(null, {
+                onEachFeature: geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63_onEachFeature,
+            
+                style: geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63_styler,
+            ...{
+}
+        });
+
+        function geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63_add (data) {
+            geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63
+                .addData(data);
+        }
+            geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63_add({"features": [{"geometry": {"coordinates": [[[8.230940499999999, 56.68138881338027], [8.225884724637684, 56.6838842789855], [8.225873916943524, 56.683892069767445], [8.215499473214285, 56.69776341517858], [8.21549415, 56.69777845], [8.218406708191955, 56.701687079980616], [8.221467931988473, 56.705495599423635], [8.223325253324084, 56.70572679130536], [8.224490417352373, 56.703601225435634], [8.231247348986486, 56.68885844966216], [8.230940499999999, 56.68138881338027]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 22<br>
+                    <b>Unique Ships:</b> 43<br>
+                    <b>Avg. Duration (h):</b> 13.6<br>
+                    <b>Total Stops:</b> 59
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e5dc679c22e5e74e4ee3d7bea8c9ea63.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e = L.geoJson(null, {
+                onEachFeature: geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e_onEachFeature,
+            
+                style: geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e_styler,
+            ...{
+}
+        });
+
+        function geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e_add (data) {
+            geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e
+                .addData(data);
+        }
+            geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e_add({"features": [{"geometry": {"coordinates": [[[11.928715949868076, 54.57182860026384], [11.928709480047647, 54.571830319833225], [11.924869491477274, 54.5734524971591], [11.929244969696972, 54.572627358585876], [11.930544914285715, 54.57237181428571], [11.930556440758293, 54.57235444668246], [11.930008888888889, 54.572105444444446], [11.928715949868076, 54.57182860026384]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 23<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 6.4<br>
+                    <b>Total Stops:</b> 19
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_98d9f06d3cf4e1903fe47b5bb8deac1e.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_dcb5c8c1b678ab18b53744844cf498f4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_dcb5c8c1b678ab18b53744844cf498f4_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_dcb5c8c1b678ab18b53744844cf498f4 = L.geoJson(null, {
+                onEachFeature: geo_json_dcb5c8c1b678ab18b53744844cf498f4_onEachFeature,
+            
+                style: geo_json_dcb5c8c1b678ab18b53744844cf498f4_styler,
+            ...{
+}
+        });
+
+        function geo_json_dcb5c8c1b678ab18b53744844cf498f4_add (data) {
+            geo_json_dcb5c8c1b678ab18b53744844cf498f4
+                .addData(data);
+        }
+            geo_json_dcb5c8c1b678ab18b53744844cf498f4_add({"features": [{"geometry": {"coordinates": [[[8.591132494571497, 57.11698001801802], [8.590209962650066, 57.117880388394845], [8.591628369091874, 57.12206093680298], [8.597823332878892, 57.12299367087024], [8.599803128008752, 57.12309675164114], [8.601418209597743, 57.12303402540578], [8.60404488482239, 57.12134713240044], [8.591132494571497, 57.11698001801802]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_dcb5c8c1b678ab18b53744844cf498f4.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 24<br>
+                    <b>Unique Ships:</b> 38<br>
+                    <b>Avg. Duration (h):</b> 19.4<br>
+                    <b>Total Stops:</b> 41
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_dcb5c8c1b678ab18b53744844cf498f4.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_d86ec4e976aadc57cfa631c2bfcc885b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_d86ec4e976aadc57cfa631c2bfcc885b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d86ec4e976aadc57cfa631c2bfcc885b = L.geoJson(null, {
+                onEachFeature: geo_json_d86ec4e976aadc57cfa631c2bfcc885b_onEachFeature,
+            
+                style: geo_json_d86ec4e976aadc57cfa631c2bfcc885b_styler,
+            ...{
+}
+        });
+
+        function geo_json_d86ec4e976aadc57cfa631c2bfcc885b_add (data) {
+            geo_json_d86ec4e976aadc57cfa631c2bfcc885b
+                .addData(data);
+        }
+            geo_json_d86ec4e976aadc57cfa631c2bfcc885b_add({"features": [{"geometry": {"coordinates": [[[10.523836779020979, 54.85065315244755], [10.52330457553957, 54.85128589064749], [10.521751167785235, 54.8566291409396], [10.52185404787234, 54.85672345744682], [10.523966063333333, 54.851334808888886], [10.523836779020979, 54.85065315244755]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d86ec4e976aadc57cfa631c2bfcc885b.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 25<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 18.6<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_d86ec4e976aadc57cfa631c2bfcc885b.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_ebf38ab6750b8e780d3122c56f4c1a7c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ebf38ab6750b8e780d3122c56f4c1a7c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ebf38ab6750b8e780d3122c56f4c1a7c = L.geoJson(null, {
+                onEachFeature: geo_json_ebf38ab6750b8e780d3122c56f4c1a7c_onEachFeature,
+            
+                style: geo_json_ebf38ab6750b8e780d3122c56f4c1a7c_styler,
+            ...{
+}
+        });
+
+        function geo_json_ebf38ab6750b8e780d3122c56f4c1a7c_add (data) {
+            geo_json_ebf38ab6750b8e780d3122c56f4c1a7c
+                .addData(data);
+        }
+            geo_json_ebf38ab6750b8e780d3122c56f4c1a7c_add({"features": [{"geometry": {"coordinates": [[[11.682560702702702, 57.5734061081081], [11.681273972375692, 57.573464545580116], [11.667434681034482, 57.580198338362074], [11.66932090037831, 57.590171113493064], [11.672797381578947, 57.59647359210525], [11.679469260330578, 57.60229987190083], [11.693802528037383, 57.603722099688476], [11.710687729729733, 57.59523332432433], [11.682560702702702, 57.5734061081081]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ebf38ab6750b8e780d3122c56f4c1a7c.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 26<br>
+                    <b>Unique Ships:</b> 15<br>
+                    <b>Avg. Duration (h):</b> 6.1<br>
+                    <b>Total Stops:</b> 26
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ebf38ab6750b8e780d3122c56f4c1a7c.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_96a5d098a77c88c7373d30cb5df0abdc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_96a5d098a77c88c7373d30cb5df0abdc_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_96a5d098a77c88c7373d30cb5df0abdc = L.geoJson(null, {
+                onEachFeature: geo_json_96a5d098a77c88c7373d30cb5df0abdc_onEachFeature,
+            
+                style: geo_json_96a5d098a77c88c7373d30cb5df0abdc_styler,
+            ...{
+}
+        });
+
+        function geo_json_96a5d098a77c88c7373d30cb5df0abdc_add (data) {
+            geo_json_96a5d098a77c88c7373d30cb5df0abdc
+                .addData(data);
+        }
+            geo_json_96a5d098a77c88c7373d30cb5df0abdc_add({"features": [{"geometry": {"coordinates": [[[10.924846742977527, 56.40351713202247], [10.923857713968959, 56.40481804101995], [10.92351197755331, 56.40536125252525], [10.921845499487764, 56.40865820045533], [10.921862880821918, 56.41291788082192], [10.932766306772908, 56.42119427888446], [10.9347598401084, 56.42016560840109], [10.924846742977527, 56.40351713202247]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_96a5d098a77c88c7373d30cb5df0abdc.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 27<br>
+                    <b>Unique Ships:</b> 32<br>
+                    <b>Avg. Duration (h):</b> 14.3<br>
+                    <b>Total Stops:</b> 42
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_96a5d098a77c88c7373d30cb5df0abdc.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_bad9a60bb275e52543cc68bfaf646155_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_bad9a60bb275e52543cc68bfaf646155_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_bad9a60bb275e52543cc68bfaf646155 = L.geoJson(null, {
+                onEachFeature: geo_json_bad9a60bb275e52543cc68bfaf646155_onEachFeature,
+            
+                style: geo_json_bad9a60bb275e52543cc68bfaf646155_styler,
+            ...{
+}
+        });
+
+        function geo_json_bad9a60bb275e52543cc68bfaf646155_add (data) {
+            geo_json_bad9a60bb275e52543cc68bfaf646155
+                .addData(data);
+        }
+            geo_json_bad9a60bb275e52543cc68bfaf646155_add({"features": [{"geometry": {"coordinates": [[[8.132707796875, 55.998419070312494], [8.117799273972603, 56.001441], [8.120071554633471, 56.00561603734441], [8.12024754397357, 56.00574896627933], [8.136874421052632, 56.00852606680162], [8.132729510489511, 55.9984321048951], [8.132707796875, 55.998419070312494]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_bad9a60bb275e52543cc68bfaf646155.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 28<br>
+                    <b>Unique Ships:</b> 24<br>
+                    <b>Avg. Duration (h):</b> 17.1<br>
+                    <b>Total Stops:</b> 29
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_bad9a60bb275e52543cc68bfaf646155.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_18088296c81f957478b488a4ea66ef3b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_18088296c81f957478b488a4ea66ef3b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_18088296c81f957478b488a4ea66ef3b = L.geoJson(null, {
+                onEachFeature: geo_json_18088296c81f957478b488a4ea66ef3b_onEachFeature,
+            
+                style: geo_json_18088296c81f957478b488a4ea66ef3b_styler,
+            ...{
+}
+        });
+
+        function geo_json_18088296c81f957478b488a4ea66ef3b_add (data) {
+            geo_json_18088296c81f957478b488a4ea66ef3b
+                .addData(data);
+        }
+            geo_json_18088296c81f957478b488a4ea66ef3b_add({"features": [{"geometry": {"coordinates": [[[8.392736989987485, 54.627186916145185], [8.381192506887052, 54.631898], [8.381147479262673, 54.63197911674348], [8.382899331291028, 54.63186114514952], [8.38344673107127, 54.63178780589717], [8.398858647482017, 54.62917570503597], [8.392736989987485, 54.627186916145185]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_18088296c81f957478b488a4ea66ef3b.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 29<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 17.4<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_18088296c81f957478b488a4ea66ef3b.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_63400a130e7f82763da7693f8fc49f31_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_63400a130e7f82763da7693f8fc49f31_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_63400a130e7f82763da7693f8fc49f31 = L.geoJson(null, {
+                onEachFeature: geo_json_63400a130e7f82763da7693f8fc49f31_onEachFeature,
+            
+                style: geo_json_63400a130e7f82763da7693f8fc49f31_styler,
+            ...{
+}
+        });
+
+        function geo_json_63400a130e7f82763da7693f8fc49f31_add (data) {
+            geo_json_63400a130e7f82763da7693f8fc49f31
+                .addData(data);
+        }
+            geo_json_63400a130e7f82763da7693f8fc49f31_add({"features": [{"geometry": {"coordinates": [[[10.245445769308944, 55.081456360772364], [10.22990211023622, 55.09719138582676], [10.233833174825175, 55.09792785314686], [10.239857263305321, 55.09489040336134], [10.241510200972447, 55.0930415656402], [10.245445769308944, 55.081456360772364]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_63400a130e7f82763da7693f8fc49f31.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 30<br>
+                    <b>Unique Ships:</b> 9<br>
+                    <b>Avg. Duration (h):</b> 10.5<br>
+                    <b>Total Stops:</b> 13
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_63400a130e7f82763da7693f8fc49f31.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d = L.geoJson(null, {
+                onEachFeature: geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d_onEachFeature,
+            
+                style: geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d_styler,
+            ...{
+}
+        });
+
+        function geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d_add (data) {
+            geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d
+                .addData(data);
+        }
+            geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d_add({"features": [{"geometry": {"coordinates": [[[10.54262523054755, 57.43076108357349], [10.537379906295754, 57.43105146705711], [10.535277633093525, 57.43183893525181], [10.5465007, 57.44284047037037], [10.550186358867611, 57.44276580016653], [10.558165880977683, 57.43775612327311], [10.560163232908458, 57.43432470915412], [10.56038159119497, 57.43354846855345], [10.54262523054755, 57.43076108357349]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 31<br>
+                    <b>Unique Ships:</b> 34<br>
+                    <b>Avg. Duration (h):</b> 17.7<br>
+                    <b>Total Stops:</b> 37
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_a12f60ba81a79c7c4ec022d9d4c3d96d.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_a41a83bac525779ddb98ea3905d50f81_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_a41a83bac525779ddb98ea3905d50f81_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a41a83bac525779ddb98ea3905d50f81 = L.geoJson(null, {
+                onEachFeature: geo_json_a41a83bac525779ddb98ea3905d50f81_onEachFeature,
+            
+                style: geo_json_a41a83bac525779ddb98ea3905d50f81_styler,
+            ...{
+}
+        });
+
+        function geo_json_a41a83bac525779ddb98ea3905d50f81_add (data) {
+            geo_json_a41a83bac525779ddb98ea3905d50f81
+                .addData(data);
+        }
+            geo_json_a41a83bac525779ddb98ea3905d50f81_add({"features": [{"geometry": {"coordinates": [[[10.505667364250902, 57.49182157978306], [10.50375265735294, 57.492052489705884], [10.5025, 57.49333299999998], [10.5008905, 57.495385], [10.500715342105266, 57.496272868421066], [10.501503708674306, 57.49642354664485], [10.502359993255558, 57.49652042380605], [10.507371442545107, 57.492952186609685], [10.506640641059958, 57.492182661937896], [10.505667364250902, 57.49182157978306]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a41a83bac525779ddb98ea3905d50f81.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 32<br>
+                    <b>Unique Ships:</b> 30<br>
+                    <b>Avg. Duration (h):</b> 12.6<br>
+                    <b>Total Stops:</b> 50
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_a41a83bac525779ddb98ea3905d50f81.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd = L.geoJson(null, {
+                onEachFeature: geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd_onEachFeature,
+            
+                style: geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd_styler,
+            ...{
+}
+        });
+
+        function geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd_add (data) {
+            geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd
+                .addData(data);
+        }
+            geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd_add({"features": [{"geometry": {"coordinates": [[[12.680178496815286, 55.59282130812101], [12.67613394736842, 55.59363131578948], [12.679578050331127, 55.594741471523186], [12.680210383814103, 55.593120838141026], [12.680195190909089, 55.59284134545455], [12.680178496815286, 55.59282130812101]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 33<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 6.8<br>
+                    <b>Total Stops:</b> 14
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_42b4ee173b2cce3d6e9ae3c6e19731cd.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_0da60c08296a563bf70344c55f081616_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_0da60c08296a563bf70344c55f081616_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0da60c08296a563bf70344c55f081616 = L.geoJson(null, {
+                onEachFeature: geo_json_0da60c08296a563bf70344c55f081616_onEachFeature,
+            
+                style: geo_json_0da60c08296a563bf70344c55f081616_styler,
+            ...{
+}
+        });
+
+        function geo_json_0da60c08296a563bf70344c55f081616_add (data) {
+            geo_json_0da60c08296a563bf70344c55f081616
+                .addData(data);
+        }
+            geo_json_0da60c08296a563bf70344c55f081616_add({"features": [{"geometry": {"coordinates": [[[9.724879370370369, 55.55170337037037], [9.724658705882351, 55.55187852941176], [9.725287109619686, 55.55251847203579], [9.734597077348067, 55.55723115469613], [9.753815018413597, 55.56019473229462], [9.756993739124756, 55.55989297322011], [9.76286715625, 55.556464874999996], [9.724879370370369, 55.55170337037037]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0da60c08296a563bf70344c55f081616.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 34<br>
+                    <b>Unique Ships:</b> 13<br>
+                    <b>Avg. Duration (h):</b> 9.4<br>
+                    <b>Total Stops:</b> 19
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0da60c08296a563bf70344c55f081616.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_e62229c0f52c2fcf143eaed55eea761d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_e62229c0f52c2fcf143eaed55eea761d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e62229c0f52c2fcf143eaed55eea761d = L.geoJson(null, {
+                onEachFeature: geo_json_e62229c0f52c2fcf143eaed55eea761d_onEachFeature,
+            
+                style: geo_json_e62229c0f52c2fcf143eaed55eea761d_styler,
+            ...{
+}
+        });
+
+        function geo_json_e62229c0f52c2fcf143eaed55eea761d_add (data) {
+            geo_json_e62229c0f52c2fcf143eaed55eea761d
+                .addData(data);
+        }
+            geo_json_e62229c0f52c2fcf143eaed55eea761d_add({"features": [{"geometry": {"coordinates": [[[10.832510390024039, 54.93308679206731], [10.833763623130032, 54.9349059666283], [10.833833990384615, 54.93489547115384], [10.834485268285988, 54.93399333401948], [10.834151497354497, 54.93369806084656], [10.833460100624219, 54.933161158302134], [10.832510390024039, 54.93308679206731]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e62229c0f52c2fcf143eaed55eea761d.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 35<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 10.4<br>
+                    <b>Total Stops:</b> 16
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e62229c0f52c2fcf143eaed55eea761d.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_cb64ec28067521340ab118b166afef56_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_cb64ec28067521340ab118b166afef56_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_cb64ec28067521340ab118b166afef56 = L.geoJson(null, {
+                onEachFeature: geo_json_cb64ec28067521340ab118b166afef56_onEachFeature,
+            
+                style: geo_json_cb64ec28067521340ab118b166afef56_styler,
+            ...{
+}
+        });
+
+        function geo_json_cb64ec28067521340ab118b166afef56_add (data) {
+            geo_json_cb64ec28067521340ab118b166afef56
+                .addData(data);
+        }
+            geo_json_cb64ec28067521340ab118b166afef56_add({"features": [{"geometry": {"coordinates": [[[10.581627176863181, 57.71370945494995], [10.580354186704385, 57.71387700848657], [10.58198135879977, 57.715496904443164], [10.585265876449192, 57.71753441600364], [10.588270953775039, 57.71910522187982], [10.599471428776978, 57.721863317985616], [10.603074063841937, 57.72081067062585], [10.60370297109557, 57.720350347669], [10.604334154138368, 57.71986523414298], [10.604446027894001, 57.71933654672245], [10.596374899038459, 57.71520852644231], [10.590024479087454, 57.71386040494296], [10.581627176863181, 57.71370945494995]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_cb64ec28067521340ab118b166afef56.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 36<br>
+                    <b>Unique Ships:</b> 74<br>
+                    <b>Avg. Duration (h):</b> 15.3<br>
+                    <b>Total Stops:</b> 93
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_cb64ec28067521340ab118b166afef56.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_c18ef776fe4e231e1d27e8ce0299714c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_c18ef776fe4e231e1d27e8ce0299714c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c18ef776fe4e231e1d27e8ce0299714c = L.geoJson(null, {
+                onEachFeature: geo_json_c18ef776fe4e231e1d27e8ce0299714c_onEachFeature,
+            
+                style: geo_json_c18ef776fe4e231e1d27e8ce0299714c_styler,
+            ...{
+}
+        });
+
+        function geo_json_c18ef776fe4e231e1d27e8ce0299714c_add (data) {
+            geo_json_c18ef776fe4e231e1d27e8ce0299714c
+                .addData(data);
+        }
+            geo_json_c18ef776fe4e231e1d27e8ce0299714c_add({"features": [{"geometry": {"coordinates": [[[12.501769524663677, 55.61079297757846], [12.501759006250001, 55.61080239374999], [12.501335088568485, 55.61127053450052], [12.501746993243243, 55.61115215540541], [12.502040945945948, 55.61106003603604], [12.501797351778656, 55.6107991660079], [12.501769524663677, 55.61079297757846]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c18ef776fe4e231e1d27e8ce0299714c.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 37<br>
+                    <b>Unique Ships:</b> 3<br>
+                    <b>Avg. Duration (h):</b> 2.0<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_c18ef776fe4e231e1d27e8ce0299714c.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_8e0e94d4116c0bbeecc95a2d91cde566_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_8e0e94d4116c0bbeecc95a2d91cde566_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8e0e94d4116c0bbeecc95a2d91cde566 = L.geoJson(null, {
+                onEachFeature: geo_json_8e0e94d4116c0bbeecc95a2d91cde566_onEachFeature,
+            
+                style: geo_json_8e0e94d4116c0bbeecc95a2d91cde566_styler,
+            ...{
+}
+        });
+
+        function geo_json_8e0e94d4116c0bbeecc95a2d91cde566_add (data) {
+            geo_json_8e0e94d4116c0bbeecc95a2d91cde566
+                .addData(data);
+        }
+            geo_json_8e0e94d4116c0bbeecc95a2d91cde566_add({"features": [{"geometry": {"coordinates": [[[12.690604996712072, 56.044099105918264], [12.687664794207317, 56.044747863313006], [12.686866613778706, 56.04562906680584], [12.686641091370557, 56.045965558375634], [12.68466179280822, 56.049576856164386], [12.69160346385111, 56.04521104581245], [12.690604996712072, 56.044099105918264]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8e0e94d4116c0bbeecc95a2d91cde566.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 38<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 12.0<br>
+                    <b>Total Stops:</b> 13
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8e0e94d4116c0bbeecc95a2d91cde566.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_3d5dd3496fd04af216da9d68a8937d26_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_3d5dd3496fd04af216da9d68a8937d26_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_3d5dd3496fd04af216da9d68a8937d26 = L.geoJson(null, {
+                onEachFeature: geo_json_3d5dd3496fd04af216da9d68a8937d26_onEachFeature,
+            
+                style: geo_json_3d5dd3496fd04af216da9d68a8937d26_styler,
+            ...{
+}
+        });
+
+        function geo_json_3d5dd3496fd04af216da9d68a8937d26_add (data) {
+            geo_json_3d5dd3496fd04af216da9d68a8937d26
+                .addData(data);
+        }
+            geo_json_3d5dd3496fd04af216da9d68a8937d26_add({"features": [{"geometry": {"coordinates": [[[11.12357468470722, 57.32053090938033], [11.123389387283236, 57.32053508999206], [11.12350390036563, 57.32072687111518], [11.124432766853932, 57.32109544803371], [11.12679242758058, 57.32199716850266], [11.127042996580963, 57.321903996444206], [11.127288318181819, 57.32178984199133], [11.127140440758295, 57.32100134123223], [11.126514739235832, 57.32079067066835], [11.125925929095354, 57.32068618826406], [11.125129880057804, 57.32063253468208], [11.12357468470722, 57.32053090938033]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3d5dd3496fd04af216da9d68a8937d26.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 39<br>
+                    <b>Unique Ships:</b> 19<br>
+                    <b>Avg. Duration (h):</b> 12.5<br>
+                    <b>Total Stops:</b> 24
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_3d5dd3496fd04af216da9d68a8937d26.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_fc77d53996b785956f2d7d652f2d095a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_fc77d53996b785956f2d7d652f2d095a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_fc77d53996b785956f2d7d652f2d095a = L.geoJson(null, {
+                onEachFeature: geo_json_fc77d53996b785956f2d7d652f2d095a_onEachFeature,
+            
+                style: geo_json_fc77d53996b785956f2d7d652f2d095a_styler,
+            ...{
+}
+        });
+
+        function geo_json_fc77d53996b785956f2d7d652f2d095a_add (data) {
+            geo_json_fc77d53996b785956f2d7d652f2d095a
+                .addData(data);
+        }
+            geo_json_fc77d53996b785956f2d7d652f2d095a_add({"features": [{"geometry": {"coordinates": [[[12.5883580800227, 55.67614005107831], [12.592994928571429, 55.6792868], [12.593544689336015, 55.67914628812878], [12.593304034474206, 55.67899193700397], [12.588362194875252, 55.67614231692515], [12.5883580800227, 55.67614005107831]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_fc77d53996b785956f2d7d652f2d095a.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 40<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 10.2<br>
+                    <b>Total Stops:</b> 8
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_fc77d53996b785956f2d7d652f2d095a.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_dc9cdf625acf7208eb94e591d06fa60c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_dc9cdf625acf7208eb94e591d06fa60c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_dc9cdf625acf7208eb94e591d06fa60c = L.geoJson(null, {
+                onEachFeature: geo_json_dc9cdf625acf7208eb94e591d06fa60c_onEachFeature,
+            
+                style: geo_json_dc9cdf625acf7208eb94e591d06fa60c_styler,
+            ...{
+}
+        });
+
+        function geo_json_dc9cdf625acf7208eb94e591d06fa60c_add (data) {
+            geo_json_dc9cdf625acf7208eb94e591d06fa60c
+                .addData(data);
+        }
+            geo_json_dc9cdf625acf7208eb94e591d06fa60c_add({"features": [{"geometry": {"coordinates": [[[11.32385068600252, 55.75399302648171], [11.32320017571885, 55.754092998935036], [11.323515333333333, 55.75473983591332], [11.325658932659932, 55.754130375420885], [11.325990888888889, 55.75401710101009], [11.32385068600252, 55.75399302648171]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_dc9cdf625acf7208eb94e591d06fa60c.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 41<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 13.3<br>
+                    <b>Total Stops:</b> 10
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_dc9cdf625acf7208eb94e591d06fa60c.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02 = L.geoJson(null, {
+                onEachFeature: geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02_onEachFeature,
+            
+                style: geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02_styler,
+            ...{
+}
+        });
+
+        function geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02_add (data) {
+            geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02
+                .addData(data);
+        }
+            geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02_add({"features": [{"geometry": {"coordinates": [[[9.927835256997456, 57.05493944783715], [9.873409849557522, 57.055331699115044], [9.873363885869566, 57.055337043478254], [9.873349339999999, 57.05536095999998], [9.876943518686296, 57.05713118686297], [9.881799041712707, 57.05910259337016], [9.895103563025211, 57.05880557142857], [9.897320700112738, 57.05868467756482], [9.919709803013994, 57.05695768783638], [9.927835256997456, 57.05493944783715]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 42<br>
+                    <b>Unique Ships:</b> 18<br>
+                    <b>Avg. Duration (h):</b> 8.1<br>
+                    <b>Total Stops:</b> 39
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_71f3afad5edd78a3d8f1a2b8f9a56b02.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_924d15b7ba00463164389e6dcb57a211_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_924d15b7ba00463164389e6dcb57a211_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_924d15b7ba00463164389e6dcb57a211 = L.geoJson(null, {
+                onEachFeature: geo_json_924d15b7ba00463164389e6dcb57a211_onEachFeature,
+            
+                style: geo_json_924d15b7ba00463164389e6dcb57a211_styler,
+            ...{
+}
+        });
+
+        function geo_json_924d15b7ba00463164389e6dcb57a211_add (data) {
+            geo_json_924d15b7ba00463164389e6dcb57a211
+                .addData(data);
+        }
+            geo_json_924d15b7ba00463164389e6dcb57a211_add({"features": [{"geometry": {"coordinates": [[[14.838983261560694, 55.24789266184971], [14.83603585419092, 55.24801020314319], [14.836185363950674, 55.248263853520804], [14.83800469230769, 55.248239], [14.838983261560694, 55.24789266184971]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_924d15b7ba00463164389e6dcb57a211.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 43<br>
+                    <b>Unique Ships:</b> 5<br>
+                    <b>Avg. Duration (h):</b> 12.2<br>
+                    <b>Total Stops:</b> 8
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_924d15b7ba00463164389e6dcb57a211.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_314c97024b9cac93cbc29294bec9f309_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_314c97024b9cac93cbc29294bec9f309_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_314c97024b9cac93cbc29294bec9f309 = L.geoJson(null, {
+                onEachFeature: geo_json_314c97024b9cac93cbc29294bec9f309_onEachFeature,
+            
+                style: geo_json_314c97024b9cac93cbc29294bec9f309_styler,
+            ...{
+}
+        });
+
+        function geo_json_314c97024b9cac93cbc29294bec9f309_add (data) {
+            geo_json_314c97024b9cac93cbc29294bec9f309
+                .addData(data);
+        }
+            geo_json_314c97024b9cac93cbc29294bec9f309_add({"features": [{"geometry": {"coordinates": [[[10.253636739436622, 55.90994497887325], [10.253628014705882, 55.90995742647059], [10.253624951245937, 55.90998746695558], [10.253834105140188, 55.910791178738314], [10.259032869158878, 55.9118949805895], [10.259252795918366, 55.911891234693876], [10.255822757575757, 55.91016953030303], [10.255600783625733, 55.910122372319684], [10.254642172717272, 55.90996354455446], [10.253636739436622, 55.90994497887325]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_314c97024b9cac93cbc29294bec9f309.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 44<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 9.8<br>
+                    <b>Total Stops:</b> 17
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_314c97024b9cac93cbc29294bec9f309.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_55a6359a9e31427fcdcb73eea8601540_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_55a6359a9e31427fcdcb73eea8601540_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_55a6359a9e31427fcdcb73eea8601540 = L.geoJson(null, {
+                onEachFeature: geo_json_55a6359a9e31427fcdcb73eea8601540_onEachFeature,
+            
+                style: geo_json_55a6359a9e31427fcdcb73eea8601540_styler,
+            ...{
+}
+        });
+
+        function geo_json_55a6359a9e31427fcdcb73eea8601540_add (data) {
+            geo_json_55a6359a9e31427fcdcb73eea8601540
+                .addData(data);
+        }
+            geo_json_55a6359a9e31427fcdcb73eea8601540_add({"features": [{"geometry": {"coordinates": [[[9.888419436893205, 55.26866857420249], [9.884621706257981, 55.26899321455939], [9.888422310919186, 55.270937218383715], [9.889301198347107, 55.270383001652895], [9.889301604041508, 55.27032510649918], [9.889145544159543, 55.269348568376074], [9.888419436893205, 55.26866857420249]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_55a6359a9e31427fcdcb73eea8601540.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 45<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 12.2<br>
+                    <b>Total Stops:</b> 10
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_55a6359a9e31427fcdcb73eea8601540.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_772a89f9e594116624ebdf338af04ade_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_772a89f9e594116624ebdf338af04ade_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_772a89f9e594116624ebdf338af04ade = L.geoJson(null, {
+                onEachFeature: geo_json_772a89f9e594116624ebdf338af04ade_onEachFeature,
+            
+                style: geo_json_772a89f9e594116624ebdf338af04ade_styler,
+            ...{
+}
+        });
+
+        function geo_json_772a89f9e594116624ebdf338af04ade_add (data) {
+            geo_json_772a89f9e594116624ebdf338af04ade
+                .addData(data);
+        }
+            geo_json_772a89f9e594116624ebdf338af04ade_add({"features": [{"geometry": {"coordinates": [[[10.304162065389141, 56.98974844595731], [10.306821384615384, 56.99116069230771], [10.306848714285712, 56.991170142857136], [10.308891248873875, 56.99146355518018], [10.30812826980198, 56.990158956683175], [10.304162065389141, 56.98974844595731]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_772a89f9e594116624ebdf338af04ade.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 46<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 10.6<br>
+                    <b>Total Stops:</b> 11
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_772a89f9e594116624ebdf338af04ade.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_f01cf6fb9675370dbbcb762d4a23439a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_f01cf6fb9675370dbbcb762d4a23439a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f01cf6fb9675370dbbcb762d4a23439a = L.geoJson(null, {
+                onEachFeature: geo_json_f01cf6fb9675370dbbcb762d4a23439a_onEachFeature,
+            
+                style: geo_json_f01cf6fb9675370dbbcb762d4a23439a_styler,
+            ...{
+}
+        });
+
+        function geo_json_f01cf6fb9675370dbbcb762d4a23439a_add (data) {
+            geo_json_f01cf6fb9675370dbbcb762d4a23439a
+                .addData(data);
+        }
+            geo_json_f01cf6fb9675370dbbcb762d4a23439a_add({"features": [{"geometry": {"coordinates": [[[10.670660724235738, 54.75088882902617], [10.668039989583333, 54.75339687499999], [10.671847211538461, 54.751468190705125], [10.671632271084338, 54.75098263554216], [10.670660724235738, 54.75088882902617]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f01cf6fb9675370dbbcb762d4a23439a.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 47<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 13.5<br>
+                    <b>Total Stops:</b> 10
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f01cf6fb9675370dbbcb762d4a23439a.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_80c9e0b66cfdb15ab887c53f34e47af2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_80c9e0b66cfdb15ab887c53f34e47af2_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_80c9e0b66cfdb15ab887c53f34e47af2 = L.geoJson(null, {
+                onEachFeature: geo_json_80c9e0b66cfdb15ab887c53f34e47af2_onEachFeature,
+            
+                style: geo_json_80c9e0b66cfdb15ab887c53f34e47af2_styler,
+            ...{
+}
+        });
+
+        function geo_json_80c9e0b66cfdb15ab887c53f34e47af2_add (data) {
+            geo_json_80c9e0b66cfdb15ab887c53f34e47af2
+                .addData(data);
+        }
+            geo_json_80c9e0b66cfdb15ab887c53f34e47af2_add({"features": [{"geometry": {"coordinates": [[[9.973858703196347, 57.589542995433796], [9.954083658227846, 57.59154770886077], [9.95378243271028, 57.591673970924205], [9.95383874222668, 57.591977310932805], [9.958411297333589, 57.594711036831], [9.972790817638266, 57.59590069058296], [9.978662832541568, 57.59480316745844], [9.981066389753247, 57.593761573084926], [9.983437992443326, 57.59263817884132], [9.981792841488277, 57.5917273946653], [9.973858703196347, 57.589542995433796]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_80c9e0b66cfdb15ab887c53f34e47af2.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 48<br>
+                    <b>Unique Ships:</b> 82<br>
+                    <b>Avg. Duration (h):</b> 15.4<br>
+                    <b>Total Stops:</b> 97
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_80c9e0b66cfdb15ab887c53f34e47af2.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_ac18b627abd68cff4eb74861cf1d548e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ac18b627abd68cff4eb74861cf1d548e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ac18b627abd68cff4eb74861cf1d548e = L.geoJson(null, {
+                onEachFeature: geo_json_ac18b627abd68cff4eb74861cf1d548e_onEachFeature,
+            
+                style: geo_json_ac18b627abd68cff4eb74861cf1d548e_styler,
+            ...{
+}
+        });
+
+        function geo_json_ac18b627abd68cff4eb74861cf1d548e_add (data) {
+            geo_json_ac18b627abd68cff4eb74861cf1d548e
+                .addData(data);
+        }
+            geo_json_ac18b627abd68cff4eb74861cf1d548e_add({"features": [{"geometry": {"coordinates": [[[10.539710491354976, 57.33027063373324], [10.53232541484556, 57.33253680734953], [10.529482071428571, 57.33385621428572], [10.529469727272726, 57.333897181818195], [10.52968, 57.334045833333334], [10.530343229619564, 57.333980017663045], [10.539710491354976, 57.33027063373324]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ac18b627abd68cff4eb74861cf1d548e.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 49<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 9.5<br>
+                    <b>Total Stops:</b> 15
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ac18b627abd68cff4eb74861cf1d548e.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_85f120107fe5562adee1b06ddd2d955f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_85f120107fe5562adee1b06ddd2d955f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_85f120107fe5562adee1b06ddd2d955f = L.geoJson(null, {
+                onEachFeature: geo_json_85f120107fe5562adee1b06ddd2d955f_onEachFeature,
+            
+                style: geo_json_85f120107fe5562adee1b06ddd2d955f_styler,
+            ...{
+}
+        });
+
+        function geo_json_85f120107fe5562adee1b06ddd2d955f_add (data) {
+            geo_json_85f120107fe5562adee1b06ddd2d955f
+                .addData(data);
+        }
+            geo_json_85f120107fe5562adee1b06ddd2d955f_add({"features": [{"geometry": {"coordinates": [[[10.05238004221636, 55.821561614775725], [10.052159877519378, 55.82171946821706], [10.051706112432433, 55.82283384], [10.051687733686283, 55.82290664934745], [10.062757702450812, 55.822530463237825], [10.063729240583232, 55.82223030862698], [10.05238004221636, 55.821561614775725]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_85f120107fe5562adee1b06ddd2d955f.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 50<br>
+                    <b>Unique Ships:</b> 9<br>
+                    <b>Avg. Duration (h):</b> 19.1<br>
+                    <b>Total Stops:</b> 11
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_85f120107fe5562adee1b06ddd2d955f.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_edd5263cfe7289daa7018432dca65bf2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_edd5263cfe7289daa7018432dca65bf2_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_edd5263cfe7289daa7018432dca65bf2 = L.geoJson(null, {
+                onEachFeature: geo_json_edd5263cfe7289daa7018432dca65bf2_onEachFeature,
+            
+                style: geo_json_edd5263cfe7289daa7018432dca65bf2_styler,
+            ...{
+}
+        });
+
+        function geo_json_edd5263cfe7289daa7018432dca65bf2_add (data) {
+            geo_json_edd5263cfe7289daa7018432dca65bf2
+                .addData(data);
+        }
+            geo_json_edd5263cfe7289daa7018432dca65bf2_add({"features": [{"geometry": {"coordinates": [[[12.647527677704195, 55.67668950331126], [12.634448275, 55.6769970875], [12.598627467966574, 55.70269043732591], [12.604469028322441, 55.710596895424835], [12.628500622594883, 55.70987265754634], [12.653845732338745, 55.70038271654234], [12.64952715942029, 55.68104451630435], [12.647527677704195, 55.67668950331126]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_edd5263cfe7289daa7018432dca65bf2.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 51<br>
+                    <b>Unique Ships:</b> 24<br>
+                    <b>Avg. Duration (h):</b> 6.0<br>
+                    <b>Total Stops:</b> 46
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_edd5263cfe7289daa7018432dca65bf2.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_10cea1ef3ea40306b3006b30f6a2c081_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_10cea1ef3ea40306b3006b30f6a2c081_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_10cea1ef3ea40306b3006b30f6a2c081 = L.geoJson(null, {
+                onEachFeature: geo_json_10cea1ef3ea40306b3006b30f6a2c081_onEachFeature,
+            
+                style: geo_json_10cea1ef3ea40306b3006b30f6a2c081_styler,
+            ...{
+}
+        });
+
+        function geo_json_10cea1ef3ea40306b3006b30f6a2c081_add (data) {
+            geo_json_10cea1ef3ea40306b3006b30f6a2c081
+                .addData(data);
+        }
+            geo_json_10cea1ef3ea40306b3006b30f6a2c081_add({"features": [{"geometry": {"coordinates": [[[12.313316232899023, 56.12578513843649], [12.309070456897565, 56.12603445078208], [12.308749147137506, 56.1281650886392], [12.310417048780488, 56.127439045296164], [12.313316232899023, 56.12578513843649]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_10cea1ef3ea40306b3006b30f6a2c081.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 52<br>
+                    <b>Unique Ships:</b> 24<br>
+                    <b>Avg. Duration (h):</b> 16.9<br>
+                    <b>Total Stops:</b> 25
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_10cea1ef3ea40306b3006b30f6a2c081.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_57b692e298ef2c1435fb62c5404d722d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_57b692e298ef2c1435fb62c5404d722d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_57b692e298ef2c1435fb62c5404d722d = L.geoJson(null, {
+                onEachFeature: geo_json_57b692e298ef2c1435fb62c5404d722d_onEachFeature,
+            
+                style: geo_json_57b692e298ef2c1435fb62c5404d722d_styler,
+            ...{
+}
+        });
+
+        function geo_json_57b692e298ef2c1435fb62c5404d722d_add (data) {
+            geo_json_57b692e298ef2c1435fb62c5404d722d
+                .addData(data);
+        }
+            geo_json_57b692e298ef2c1435fb62c5404d722d_add({"features": [{"geometry": {"coordinates": [[[14.7029197325, 55.1844113725], [14.702567213510253, 55.18881712786491], [14.702576778190831, 55.18885014622057], [14.703487114178168, 55.18881932747804], [14.703950390163932, 55.18750523278689], [14.704197193460491, 55.18649172070845], [14.7029197325, 55.1844113725]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_57b692e298ef2c1435fb62c5404d722d.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 53<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 21.3<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_57b692e298ef2c1435fb62c5404d722d.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_d72d4963ad4a4710e29181742929543a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_d72d4963ad4a4710e29181742929543a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d72d4963ad4a4710e29181742929543a = L.geoJson(null, {
+                onEachFeature: geo_json_d72d4963ad4a4710e29181742929543a_onEachFeature,
+            
+                style: geo_json_d72d4963ad4a4710e29181742929543a_styler,
+            ...{
+}
+        });
+
+        function geo_json_d72d4963ad4a4710e29181742929543a_add (data) {
+            geo_json_d72d4963ad4a4710e29181742929543a
+                .addData(data);
+        }
+            geo_json_d72d4963ad4a4710e29181742929543a_add({"features": [{"geometry": {"coordinates": [[[10.213089660377358, 56.13736419056604], [10.2142549375, 56.15439209134616], [10.214597740041928, 56.156426272536685], [10.219176929752066, 56.16452989669422], [10.220367840579712, 56.165895434782605], [10.220485319209615, 56.165926935424736], [10.254668213733906, 56.15238288626609], [10.25459264949402, 56.152184334866604], [10.213089660377358, 56.13736419056604]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d72d4963ad4a4710e29181742929543a.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 54<br>
+                    <b>Unique Ships:</b> 23<br>
+                    <b>Avg. Duration (h):</b> 9.9<br>
+                    <b>Total Stops:</b> 41
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_d72d4963ad4a4710e29181742929543a.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_5ad3107721f35c81ec50ed5057b58870_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_5ad3107721f35c81ec50ed5057b58870_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5ad3107721f35c81ec50ed5057b58870 = L.geoJson(null, {
+                onEachFeature: geo_json_5ad3107721f35c81ec50ed5057b58870_onEachFeature,
+            
+                style: geo_json_5ad3107721f35c81ec50ed5057b58870_styler,
+            ...{
+}
+        });
+
+        function geo_json_5ad3107721f35c81ec50ed5057b58870_add (data) {
+            geo_json_5ad3107721f35c81ec50ed5057b58870
+                .addData(data);
+        }
+            geo_json_5ad3107721f35c81ec50ed5057b58870_add({"features": [{"geometry": {"coordinates": [[[11.13600725085992, 54.82810265520105], [11.123596878281624, 54.829812048926016], [11.11914696257485, 54.8311545479042], [11.12100983704572, 54.83363434349355], [11.124607035805626, 54.83323835294119], [11.13600725085992, 54.82810265520105]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5ad3107721f35c81ec50ed5057b58870.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 55<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 18.2<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_5ad3107721f35c81ec50ed5057b58870.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_b426e8d7a851bb982a9fee3b46d94b8d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_b426e8d7a851bb982a9fee3b46d94b8d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b426e8d7a851bb982a9fee3b46d94b8d = L.geoJson(null, {
+                onEachFeature: geo_json_b426e8d7a851bb982a9fee3b46d94b8d_onEachFeature,
+            
+                style: geo_json_b426e8d7a851bb982a9fee3b46d94b8d_styler,
+            ...{
+}
+        });
+
+        function geo_json_b426e8d7a851bb982a9fee3b46d94b8d_add (data) {
+            geo_json_b426e8d7a851bb982a9fee3b46d94b8d
+                .addData(data);
+        }
+            geo_json_b426e8d7a851bb982a9fee3b46d94b8d_add({"features": [{"geometry": {"coordinates": [[[8.87583256284153, 56.78807572131147], [8.87538237144259, 56.78808233648184], [8.864168029629628, 56.79335144444445], [8.863738836445108, 56.794833967637544], [8.86394053828935, 56.79513239585297], [8.864285802587386, 56.795441677074265], [8.86475149379771, 56.7954735904103], [8.86529124341571, 56.79535674474997], [8.866118660539508, 56.79515723179756], [8.876031325581398, 56.78817850000002], [8.876101317991631, 56.788123276150635], [8.876080239263803, 56.78811895705521], [8.87583256284153, 56.78807572131147]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_b426e8d7a851bb982a9fee3b46d94b8d.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 56<br>
+                    <b>Unique Ships:</b> 12<br>
+                    <b>Avg. Duration (h):</b> 15.2<br>
+                    <b>Total Stops:</b> 17
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_b426e8d7a851bb982a9fee3b46d94b8d.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_554d3062d8090801cd25768ef72a4674_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_554d3062d8090801cd25768ef72a4674_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_554d3062d8090801cd25768ef72a4674 = L.geoJson(null, {
+                onEachFeature: geo_json_554d3062d8090801cd25768ef72a4674_onEachFeature,
+            
+                style: geo_json_554d3062d8090801cd25768ef72a4674_styler,
+            ...{
+}
+        });
+
+        function geo_json_554d3062d8090801cd25768ef72a4674_add (data) {
+            geo_json_554d3062d8090801cd25768ef72a4674
+                .addData(data);
+        }
+            geo_json_554d3062d8090801cd25768ef72a4674_add({"features": [{"geometry": {"coordinates": [[[12.385343800000001, 55.6075697], [12.384835057291667, 55.607575947916665], [12.385705678030302, 55.611467634469705], [12.396101913043479, 55.61114947826087], [12.39611025, 55.61114216666666], [12.3864302, 55.60770921578947], [12.38567794535519, 55.607583972677595], [12.385343800000001, 55.6075697]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_554d3062d8090801cd25768ef72a4674.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 57<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 10.5<br>
+                    <b>Total Stops:</b> 14
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_554d3062d8090801cd25768ef72a4674.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_386d18d5b8efdcc8ef7c2a8a53d30064_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_386d18d5b8efdcc8ef7c2a8a53d30064_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_386d18d5b8efdcc8ef7c2a8a53d30064 = L.geoJson(null, {
+                onEachFeature: geo_json_386d18d5b8efdcc8ef7c2a8a53d30064_onEachFeature,
+            
+                style: geo_json_386d18d5b8efdcc8ef7c2a8a53d30064_styler,
+            ...{
+}
+        });
+
+        function geo_json_386d18d5b8efdcc8ef7c2a8a53d30064_add (data) {
+            geo_json_386d18d5b8efdcc8ef7c2a8a53d30064
+                .addData(data);
+        }
+            geo_json_386d18d5b8efdcc8ef7c2a8a53d30064_add({"features": [{"geometry": {"coordinates": [[[11.709423936196318, 55.720623758282215], [11.708687787937743, 55.721048311284044], [11.708690455040871, 55.72105837329699], [11.714286591531758, 55.720830772104605], [11.71480638461538, 55.72079273076924], [11.714809684210529, 55.720773526315796], [11.709423936196318, 55.720623758282215]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_386d18d5b8efdcc8ef7c2a8a53d30064.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 58<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 6.3<br>
+                    <b>Total Stops:</b> 10
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_386d18d5b8efdcc8ef7c2a8a53d30064.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_5875917cdadf5a5993e9d31180a7bdee_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_5875917cdadf5a5993e9d31180a7bdee_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5875917cdadf5a5993e9d31180a7bdee = L.geoJson(null, {
+                onEachFeature: geo_json_5875917cdadf5a5993e9d31180a7bdee_onEachFeature,
+            
+                style: geo_json_5875917cdadf5a5993e9d31180a7bdee_styler,
+            ...{
+}
+        });
+
+        function geo_json_5875917cdadf5a5993e9d31180a7bdee_add (data) {
+            geo_json_5875917cdadf5a5993e9d31180a7bdee
+                .addData(data);
+        }
+            geo_json_5875917cdadf5a5993e9d31180a7bdee_add({"features": [{"geometry": {"coordinates": [[[10.11369793103448, 56.7134007586207], [10.113699733333334, 56.71343496666666], [10.124954089141005, 56.71664842787683], [10.125222555431131, 56.716577015677494], [10.1137535, 56.713412727272726], [10.11369793103448, 56.7134007586207]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5875917cdadf5a5993e9d31180a7bdee.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 59<br>
+                    <b>Unique Ships:</b> 3<br>
+                    <b>Avg. Duration (h):</b> 7.3<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_5875917cdadf5a5993e9d31180a7bdee.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_ed37db33df0d9bcf30d6ad4ce25476f2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ed37db33df0d9bcf30d6ad4ce25476f2_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ed37db33df0d9bcf30d6ad4ce25476f2 = L.geoJson(null, {
+                onEachFeature: geo_json_ed37db33df0d9bcf30d6ad4ce25476f2_onEachFeature,
+            
+                style: geo_json_ed37db33df0d9bcf30d6ad4ce25476f2_styler,
+            ...{
+}
+        });
+
+        function geo_json_ed37db33df0d9bcf30d6ad4ce25476f2_add (data) {
+            geo_json_ed37db33df0d9bcf30d6ad4ce25476f2
+                .addData(data);
+        }
+            geo_json_ed37db33df0d9bcf30d6ad4ce25476f2_add({"features": [{"geometry": {"coordinates": [[[10.702825865384614, 54.93763010173698], [10.702820866150443, 54.93767132964602], [10.713573878494623, 54.94181169569893], [10.708329352811464, 54.93920458985667], [10.702825865384614, 54.93763010173698]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ed37db33df0d9bcf30d6ad4ce25476f2.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 60<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 11.9<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ed37db33df0d9bcf30d6ad4ce25476f2.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_b8933969a6c78169d2d4b5a4ecefd7b2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_b8933969a6c78169d2d4b5a4ecefd7b2_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b8933969a6c78169d2d4b5a4ecefd7b2 = L.geoJson(null, {
+                onEachFeature: geo_json_b8933969a6c78169d2d4b5a4ecefd7b2_onEachFeature,
+            
+                style: geo_json_b8933969a6c78169d2d4b5a4ecefd7b2_styler,
+            ...{
+}
+        });
+
+        function geo_json_b8933969a6c78169d2d4b5a4ecefd7b2_add (data) {
+            geo_json_b8933969a6c78169d2d4b5a4ecefd7b2
+                .addData(data);
+        }
+            geo_json_b8933969a6c78169d2d4b5a4ecefd7b2_add({"features": [{"geometry": {"coordinates": [[[8.121287847560977, 56.36707188414634], [8.120438647058823, 56.36708129411765], [8.120407916666666, 56.367096333333336], [8.118732060353908, 56.37086799652412], [8.120921534834796, 56.3690388653632], [8.121187439455456, 56.36867806496298], [8.12136129476584, 56.36843182444277], [8.121478967741936, 56.36708458064515], [8.121467573573572, 56.36707412612613], [8.121287847560977, 56.36707188414634]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_b8933969a6c78169d2d4b5a4ecefd7b2.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 61<br>
+                    <b>Unique Ships:</b> 8<br>
+                    <b>Avg. Duration (h):</b> 11.1<br>
+                    <b>Total Stops:</b> 13
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_b8933969a6c78169d2d4b5a4ecefd7b2.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_8c394aba8cbb45d768f8565e112263e9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_8c394aba8cbb45d768f8565e112263e9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8c394aba8cbb45d768f8565e112263e9 = L.geoJson(null, {
+                onEachFeature: geo_json_8c394aba8cbb45d768f8565e112263e9_onEachFeature,
+            
+                style: geo_json_8c394aba8cbb45d768f8565e112263e9_styler,
+            ...{
+}
+        });
+
+        function geo_json_8c394aba8cbb45d768f8565e112263e9_add (data) {
+            geo_json_8c394aba8cbb45d768f8565e112263e9
+                .addData(data);
+        }
+            geo_json_8c394aba8cbb45d768f8565e112263e9_add({"features": [{"geometry": {"coordinates": [[[10.810911733905577, 55.296663626609444], [10.805632834848485, 55.300768766666664], [10.805304755882709, 55.301148154458794], [10.80547545802651, 55.30126120324006], [10.81259613846154, 55.29754016923078], [10.810911733905577, 55.296663626609444]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8c394aba8cbb45d768f8565e112263e9.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 62<br>
+                    <b>Unique Ships:</b> 5<br>
+                    <b>Avg. Duration (h):</b> 14.0<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8c394aba8cbb45d768f8565e112263e9.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_06e19ea07b0d89cf048f39313fc3b72c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_06e19ea07b0d89cf048f39313fc3b72c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_06e19ea07b0d89cf048f39313fc3b72c = L.geoJson(null, {
+                onEachFeature: geo_json_06e19ea07b0d89cf048f39313fc3b72c_onEachFeature,
+            
+                style: geo_json_06e19ea07b0d89cf048f39313fc3b72c_styler,
+            ...{
+}
+        });
+
+        function geo_json_06e19ea07b0d89cf048f39313fc3b72c_add (data) {
+            geo_json_06e19ea07b0d89cf048f39313fc3b72c
+                .addData(data);
+        }
+            geo_json_06e19ea07b0d89cf048f39313fc3b72c_add({"features": [{"geometry": {"coordinates": [[[10.7115069, 56.53321350000001], [10.711457821428573, 56.53321771428573], [10.710692515151516, 56.534117151515154], [10.710811529411766, 56.53432857918552], [10.712852301202007, 56.53397999323141], [10.7115069, 56.53321350000001]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_06e19ea07b0d89cf048f39313fc3b72c.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 63<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 7.1<br>
+                    <b>Total Stops:</b> 10
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_06e19ea07b0d89cf048f39313fc3b72c.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_8d3a4fa562e173a7e543356ec6b93a18_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_8d3a4fa562e173a7e543356ec6b93a18_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8d3a4fa562e173a7e543356ec6b93a18 = L.geoJson(null, {
+                onEachFeature: geo_json_8d3a4fa562e173a7e543356ec6b93a18_onEachFeature,
+            
+                style: geo_json_8d3a4fa562e173a7e543356ec6b93a18_styler,
+            ...{
+}
+        });
+
+        function geo_json_8d3a4fa562e173a7e543356ec6b93a18_add (data) {
+            geo_json_8d3a4fa562e173a7e543356ec6b93a18
+                .addData(data);
+        }
+            geo_json_8d3a4fa562e173a7e543356ec6b93a18_add({"features": [{"geometry": {"coordinates": [[[11.00024297388633, 54.83621132258065], [10.997964883604503, 54.83874268585732], [10.999544320683112, 54.83879619165084], [11.000700707100592, 54.838022495562136], [11.001071522565322, 54.83754169358671], [11.00024297388633, 54.83621132258065]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8d3a4fa562e173a7e543356ec6b93a18.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 64<br>
+                    <b>Unique Ships:</b> 3<br>
+                    <b>Avg. Duration (h):</b> 2.9<br>
+                    <b>Total Stops:</b> 17
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8d3a4fa562e173a7e543356ec6b93a18.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_4dac3ef82907c2cc839a9d2d9de35304_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_4dac3ef82907c2cc839a9d2d9de35304_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4dac3ef82907c2cc839a9d2d9de35304 = L.geoJson(null, {
+                onEachFeature: geo_json_4dac3ef82907c2cc839a9d2d9de35304_onEachFeature,
+            
+                style: geo_json_4dac3ef82907c2cc839a9d2d9de35304_styler,
+            ...{
+}
+        });
+
+        function geo_json_4dac3ef82907c2cc839a9d2d9de35304_add (data) {
+            geo_json_4dac3ef82907c2cc839a9d2d9de35304
+                .addData(data);
+        }
+            geo_json_4dac3ef82907c2cc839a9d2d9de35304_add({"features": [{"geometry": {"coordinates": [[[11.348268893965225, 54.655046118990796], [11.347745136307312, 54.65621413506815], [11.348508454545453, 54.657913169533174], [11.350060700218819, 54.657407411378564], [11.350874274755382, 54.656874059491194], [11.351022684033614, 54.65657149747899], [11.348268893965225, 54.655046118990796]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4dac3ef82907c2cc839a9d2d9de35304.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 65<br>
+                    <b>Unique Ships:</b> 12<br>
+                    <b>Avg. Duration (h):</b> 13.5<br>
+                    <b>Total Stops:</b> 17
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_4dac3ef82907c2cc839a9d2d9de35304.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_224551d00f275f6bac5e9073263a558b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_224551d00f275f6bac5e9073263a558b_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_224551d00f275f6bac5e9073263a558b = L.geoJson(null, {
+                onEachFeature: geo_json_224551d00f275f6bac5e9073263a558b_onEachFeature,
+            
+                style: geo_json_224551d00f275f6bac5e9073263a558b_styler,
+            ...{
+}
+        });
+
+        function geo_json_224551d00f275f6bac5e9073263a558b_add (data) {
+            geo_json_224551d00f275f6bac5e9073263a558b
+                .addData(data);
+        }
+            geo_json_224551d00f275f6bac5e9073263a558b_add({"features": [{"geometry": {"coordinates": [[[10.304981229946524, 56.608539435828874], [10.300717868007787, 56.60895769214795], [10.304319286624203, 56.61054561146498], [10.305517579748512, 56.610392204831236], [10.304981229946524, 56.608539435828874]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_224551d00f275f6bac5e9073263a558b.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 66<br>
+                    <b>Unique Ships:</b> 3<br>
+                    <b>Avg. Duration (h):</b> 8.7<br>
+                    <b>Total Stops:</b> 8
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_224551d00f275f6bac5e9073263a558b.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_bd59c7e1b6224cf686254e1e9ec00d03_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_bd59c7e1b6224cf686254e1e9ec00d03_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_bd59c7e1b6224cf686254e1e9ec00d03 = L.geoJson(null, {
+                onEachFeature: geo_json_bd59c7e1b6224cf686254e1e9ec00d03_onEachFeature,
+            
+                style: geo_json_bd59c7e1b6224cf686254e1e9ec00d03_styler,
+            ...{
+}
+        });
+
+        function geo_json_bd59c7e1b6224cf686254e1e9ec00d03_add (data) {
+            geo_json_bd59c7e1b6224cf686254e1e9ec00d03
+                .addData(data);
+        }
+            geo_json_bd59c7e1b6224cf686254e1e9ec00d03_add({"features": [{"geometry": {"coordinates": [[[11.899275447171823, 54.99477098185699], [11.873811057965138, 54.99487798905553], [11.874159321568627, 54.995210568627456], [11.875986895793499, 54.99597478011472], [11.88668669211196, 54.99664389058524], [11.8870486359447, 54.99666140552997], [11.899275447171823, 54.99477098185699]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_bd59c7e1b6224cf686254e1e9ec00d03.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 67<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 9.0<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_bd59c7e1b6224cf686254e1e9ec00d03.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_c46ccae2d3534d587d76935bd51be261_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_c46ccae2d3534d587d76935bd51be261_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c46ccae2d3534d587d76935bd51be261 = L.geoJson(null, {
+                onEachFeature: geo_json_c46ccae2d3534d587d76935bd51be261_onEachFeature,
+            
+                style: geo_json_c46ccae2d3534d587d76935bd51be261_styler,
+            ...{
+}
+        });
+
+        function geo_json_c46ccae2d3534d587d76935bd51be261_add (data) {
+            geo_json_c46ccae2d3534d587d76935bd51be261
+                .addData(data);
+        }
+            geo_json_c46ccae2d3534d587d76935bd51be261_add({"features": [{"geometry": {"coordinates": [[[9.562705384174311, 55.703190705275226], [9.543281396332862, 55.70654183638928], [9.550492140860214, 55.707565751612904], [9.558837786885245, 55.70750101967214], [9.562705384174311, 55.703190705275226]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c46ccae2d3534d587d76935bd51be261.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 68<br>
+                    <b>Unique Ships:</b> 10<br>
+                    <b>Avg. Duration (h):</b> 20.7<br>
+                    <b>Total Stops:</b> 10
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_c46ccae2d3534d587d76935bd51be261.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_da0dab479431240dd2ad1124761b447f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_da0dab479431240dd2ad1124761b447f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_da0dab479431240dd2ad1124761b447f = L.geoJson(null, {
+                onEachFeature: geo_json_da0dab479431240dd2ad1124761b447f_onEachFeature,
+            
+                style: geo_json_da0dab479431240dd2ad1124761b447f_styler,
+            ...{
+}
+        });
+
+        function geo_json_da0dab479431240dd2ad1124761b447f_add (data) {
+            geo_json_da0dab479431240dd2ad1124761b447f
+                .addData(data);
+        }
+            geo_json_da0dab479431240dd2ad1124761b447f_add({"features": [{"geometry": {"coordinates": [[[11.37069338450502, 55.97214320755619], [11.368503244680852, 55.97223963981763], [11.367374811129848, 55.97252520067453], [11.368631604988607, 55.9724714931047], [11.370787499818116, 55.972171838668615], [11.37069338450502, 55.97214320755619]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_da0dab479431240dd2ad1124761b447f.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 69<br>
+                    <b>Unique Ships:</b> 5<br>
+                    <b>Avg. Duration (h):</b> 13.1<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_da0dab479431240dd2ad1124761b447f.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_638e889d088280fcf84d1dff7cebecd0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_638e889d088280fcf84d1dff7cebecd0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_638e889d088280fcf84d1dff7cebecd0 = L.geoJson(null, {
+                onEachFeature: geo_json_638e889d088280fcf84d1dff7cebecd0_onEachFeature,
+            
+                style: geo_json_638e889d088280fcf84d1dff7cebecd0_styler,
+            ...{
+}
+        });
+
+        function geo_json_638e889d088280fcf84d1dff7cebecd0_add (data) {
+            geo_json_638e889d088280fcf84d1dff7cebecd0
+                .addData(data);
+        }
+            geo_json_638e889d088280fcf84d1dff7cebecd0_add({"features": [{"geometry": {"coordinates": [[[12.352539334238026, 56.929165888180215], [12.352200159294268, 56.92918100327662], [12.351768820009932, 56.92920707621649], [12.351530388157894, 56.92925082894737], [12.351506272890482, 56.92926205565529], [12.351307510535822, 56.92967863094521], [12.352870679779157, 56.92956561490683], [12.352539334238026, 56.929165888180215]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_638e889d088280fcf84d1dff7cebecd0.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 70<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 14.1<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_638e889d088280fcf84d1dff7cebecd0.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_248ea3ca86f74a7f617f4f40f810c53d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_248ea3ca86f74a7f617f4f40f810c53d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_248ea3ca86f74a7f617f4f40f810c53d = L.geoJson(null, {
+                onEachFeature: geo_json_248ea3ca86f74a7f617f4f40f810c53d_onEachFeature,
+            
+                style: geo_json_248ea3ca86f74a7f617f4f40f810c53d_styler,
+            ...{
+}
+        });
+
+        function geo_json_248ea3ca86f74a7f617f4f40f810c53d_add (data) {
+            geo_json_248ea3ca86f74a7f617f4f40f810c53d
+                .addData(data);
+        }
+            geo_json_248ea3ca86f74a7f617f4f40f810c53d_add({"features": [{"geometry": {"coordinates": [[[12.457936556808326, 56.09453258109279], [12.457927095940962, 56.094534822878224], [12.457918313575524, 56.0945470707457], [12.457919837997053, 56.09455759499264], [12.458011494033414, 56.09463679236276], [12.461121100168825, 56.09667320596511], [12.457936556808326, 56.09453258109279]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_248ea3ca86f74a7f617f4f40f810c53d.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 71<br>
+                    <b>Unique Ships:</b> 1<br>
+                    <b>Avg. Duration (h):</b> 2.3<br>
+                    <b>Total Stops:</b> 8
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_248ea3ca86f74a7f617f4f40f810c53d.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_7c02637439bcc5f718d832a3661dc243_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_7c02637439bcc5f718d832a3661dc243_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7c02637439bcc5f718d832a3661dc243 = L.geoJson(null, {
+                onEachFeature: geo_json_7c02637439bcc5f718d832a3661dc243_onEachFeature,
+            
+                style: geo_json_7c02637439bcc5f718d832a3661dc243_styler,
+            ...{
+}
+        });
+
+        function geo_json_7c02637439bcc5f718d832a3661dc243_add (data) {
+            geo_json_7c02637439bcc5f718d832a3661dc243
+                .addData(data);
+        }
+            geo_json_7c02637439bcc5f718d832a3661dc243_add({"features": [{"geometry": {"coordinates": [[[12.487134681250001, 56.891925112500005], [12.488341888731895, 56.89323423613565], [12.4895, 56.892], [12.4895, 56.891999999999996], [12.489293523809526, 56.891983761904775], [12.487134681250001, 56.891925112500005]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_7c02637439bcc5f718d832a3661dc243.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 72<br>
+                    <b>Unique Ships:</b> 6<br>
+                    <b>Avg. Duration (h):</b> 7.7<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_7c02637439bcc5f718d832a3661dc243.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_63f2f2818c81dfd61bc92ff954fdfd90_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_63f2f2818c81dfd61bc92ff954fdfd90_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_63f2f2818c81dfd61bc92ff954fdfd90 = L.geoJson(null, {
+                onEachFeature: geo_json_63f2f2818c81dfd61bc92ff954fdfd90_onEachFeature,
+            
+                style: geo_json_63f2f2818c81dfd61bc92ff954fdfd90_styler,
+            ...{
+}
+        });
+
+        function geo_json_63f2f2818c81dfd61bc92ff954fdfd90_add (data) {
+            geo_json_63f2f2818c81dfd61bc92ff954fdfd90
+                .addData(data);
+        }
+            geo_json_63f2f2818c81dfd61bc92ff954fdfd90_add({"features": [{"geometry": {"coordinates": [[[7.977670468003085, 56.469655009252115], [7.9757605997151, 56.47050304700855], [7.9773096359482105, 56.476316335110425], [7.986516947916666, 56.46999435590278], [7.982195284768211, 56.46977248675498], [7.977670468003085, 56.469655009252115]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_63f2f2818c81dfd61bc92ff954fdfd90.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 73<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 2.0<br>
+                    <b>Total Stops:</b> 19
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_63f2f2818c81dfd61bc92ff954fdfd90.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_5bf4084e30d5c99d588cb18b5440cc16_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_5bf4084e30d5c99d588cb18b5440cc16_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5bf4084e30d5c99d588cb18b5440cc16 = L.geoJson(null, {
+                onEachFeature: geo_json_5bf4084e30d5c99d588cb18b5440cc16_onEachFeature,
+            
+                style: geo_json_5bf4084e30d5c99d588cb18b5440cc16_styler,
+            ...{
+}
+        });
+
+        function geo_json_5bf4084e30d5c99d588cb18b5440cc16_add (data) {
+            geo_json_5bf4084e30d5c99d588cb18b5440cc16
+                .addData(data);
+        }
+            geo_json_5bf4084e30d5c99d588cb18b5440cc16_add({"features": [{"geometry": {"coordinates": [[[12.99735058787879, 55.613656509696966], [12.997257368794326, 55.61377896453901], [12.998899960135134, 55.61854861554055], [13.001976363636363, 55.6179610909091], [13.001983166666667, 55.617938166666676], [13.002321547169812, 55.61366860377359], [12.99735058787879, 55.613656509696966]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5bf4084e30d5c99d588cb18b5440cc16.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 74<br>
+                    <b>Unique Ships:</b> 5<br>
+                    <b>Avg. Duration (h):</b> 4.4<br>
+                    <b>Total Stops:</b> 12
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_5bf4084e30d5c99d588cb18b5440cc16.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_5d55e86082de0246aa7dffba905c2f58_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_5d55e86082de0246aa7dffba905c2f58_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5d55e86082de0246aa7dffba905c2f58 = L.geoJson(null, {
+                onEachFeature: geo_json_5d55e86082de0246aa7dffba905c2f58_onEachFeature,
+            
+                style: geo_json_5d55e86082de0246aa7dffba905c2f58_styler,
+            ...{
+}
+        });
+
+        function geo_json_5d55e86082de0246aa7dffba905c2f58_add (data) {
+            geo_json_5d55e86082de0246aa7dffba905c2f58
+                .addData(data);
+        }
+            geo_json_5d55e86082de0246aa7dffba905c2f58_add({"features": [{"geometry": {"coordinates": [[[9.052375104545455, 56.56951161818182], [9.051576458333333, 56.57559512500001], [9.053204431034485, 56.575993000000004], [9.052375104545455, 56.56951161818182]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5d55e86082de0246aa7dffba905c2f58.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 75<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 8.2<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_5d55e86082de0246aa7dffba905c2f58.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_c58df319384b4614456b8d5dfd4b3026_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_c58df319384b4614456b8d5dfd4b3026_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c58df319384b4614456b8d5dfd4b3026 = L.geoJson(null, {
+                onEachFeature: geo_json_c58df319384b4614456b8d5dfd4b3026_onEachFeature,
+            
+                style: geo_json_c58df319384b4614456b8d5dfd4b3026_styler,
+            ...{
+}
+        });
+
+        function geo_json_c58df319384b4614456b8d5dfd4b3026_add (data) {
+            geo_json_c58df319384b4614456b8d5dfd4b3026
+                .addData(data);
+        }
+            geo_json_c58df319384b4614456b8d5dfd4b3026_add({"features": [{"geometry": {"coordinates": [[[11.84296520300752, 57.68629080451128], [11.8222012, 57.69186481999999], [11.817575381310418, 57.69367855424275], [11.817955593548387, 57.693677326881726], [11.846164421052631, 57.69120742105263], [11.86649225888325, 57.6891833604061], [11.86634730994152, 57.68873757894737], [11.84296520300752, 57.68629080451128]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c58df319384b4614456b8d5dfd4b3026.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 76<br>
+                    <b>Unique Ships:</b> 14<br>
+                    <b>Avg. Duration (h):</b> 5.3<br>
+                    <b>Total Stops:</b> 16
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_c58df319384b4614456b8d5dfd4b3026.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_20f90a0e2433ddc93fc67c61fb3a01dc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_20f90a0e2433ddc93fc67c61fb3a01dc_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_20f90a0e2433ddc93fc67c61fb3a01dc = L.geoJson(null, {
+                onEachFeature: geo_json_20f90a0e2433ddc93fc67c61fb3a01dc_onEachFeature,
+            
+                style: geo_json_20f90a0e2433ddc93fc67c61fb3a01dc_styler,
+            ...{
+}
+        });
+
+        function geo_json_20f90a0e2433ddc93fc67c61fb3a01dc_add (data) {
+            geo_json_20f90a0e2433ddc93fc67c61fb3a01dc
+                .addData(data);
+        }
+            geo_json_20f90a0e2433ddc93fc67c61fb3a01dc_add({"features": [{"geometry": {"coordinates": [[[11.886574363636361, 57.685353909090914], [11.878648928571428, 57.68915664285714], [11.882585025423731, 57.69179964406779], [11.89044438410596, 57.69097826821193], [11.89446709090909, 57.68743809090908], [11.886574363636361, 57.685353909090914]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_20f90a0e2433ddc93fc67c61fb3a01dc.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 77<br>
+                    <b>Unique Ships:</b> 5<br>
+                    <b>Avg. Duration (h):</b> 2.6<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_20f90a0e2433ddc93fc67c61fb3a01dc.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_676e8825404b77d6c35128c7bbb9df77_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_676e8825404b77d6c35128c7bbb9df77_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_676e8825404b77d6c35128c7bbb9df77 = L.geoJson(null, {
+                onEachFeature: geo_json_676e8825404b77d6c35128c7bbb9df77_onEachFeature,
+            
+                style: geo_json_676e8825404b77d6c35128c7bbb9df77_styler,
+            ...{
+}
+        });
+
+        function geo_json_676e8825404b77d6c35128c7bbb9df77_add (data) {
+            geo_json_676e8825404b77d6c35128c7bbb9df77
+                .addData(data);
+        }
+            geo_json_676e8825404b77d6c35128c7bbb9df77_add({"features": [{"geometry": {"coordinates": [[[11.67242731123999, 57.700477983153824], [11.671519600485436, 57.700544921359224], [11.658058090909089, 57.703831909090916], [11.6580574, 57.703837799999995], [11.658061700000001, 57.7038507], [11.659660850574715, 57.70675345977014], [11.659669780645164, 57.70676638709678], [11.662652571428572, 57.70757728571429], [11.662661557142856, 57.7075779], [11.682683355227361, 57.70281146871357], [11.67503092789199, 57.70101124455354], [11.67242731123999, 57.700477983153824]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_676e8825404b77d6c35128c7bbb9df77.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 78<br>
+                    <b>Unique Ships:</b> 11<br>
+                    <b>Avg. Duration (h):</b> 8.0<br>
+                    <b>Total Stops:</b> 24
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_676e8825404b77d6c35128c7bbb9df77.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_ffc598ef416876060cc3eeb34f6dbf5a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_ffc598ef416876060cc3eeb34f6dbf5a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ffc598ef416876060cc3eeb34f6dbf5a = L.geoJson(null, {
+                onEachFeature: geo_json_ffc598ef416876060cc3eeb34f6dbf5a_onEachFeature,
+            
+                style: geo_json_ffc598ef416876060cc3eeb34f6dbf5a_styler,
+            ...{
+}
+        });
+
+        function geo_json_ffc598ef416876060cc3eeb34f6dbf5a_add (data) {
+            geo_json_ffc598ef416876060cc3eeb34f6dbf5a
+                .addData(data);
+        }
+            geo_json_ffc598ef416876060cc3eeb34f6dbf5a_add({"features": [{"geometry": {"coordinates": [[[11.860876265922125, 54.96592814186538], [11.868071339501778, 54.97613093594306], [11.868962171150278, 54.97677278756957], [11.866795237500002, 54.97204155723686], [11.860876265922125, 54.96592814186538]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ffc598ef416876060cc3eeb34f6dbf5a.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 79<br>
+                    <b>Unique Ships:</b> 4<br>
+                    <b>Avg. Duration (h):</b> 9.3<br>
+                    <b>Total Stops:</b> 7
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ffc598ef416876060cc3eeb34f6dbf5a.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_78bcb4eade493a04630e27bab3078b73_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_78bcb4eade493a04630e27bab3078b73_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_78bcb4eade493a04630e27bab3078b73 = L.geoJson(null, {
+                onEachFeature: geo_json_78bcb4eade493a04630e27bab3078b73_onEachFeature,
+            
+                style: geo_json_78bcb4eade493a04630e27bab3078b73_styler,
+            ...{
+}
+        });
+
+        function geo_json_78bcb4eade493a04630e27bab3078b73_add (data) {
+            geo_json_78bcb4eade493a04630e27bab3078b73
+                .addData(data);
+        }
+            geo_json_78bcb4eade493a04630e27bab3078b73_add({"features": [{"geometry": {"coordinates": [[[12.833726285714283, 55.855728], [12.831246333333333, 55.8564605], [12.823653499117128, 55.86640545673925], [12.824868644067799, 55.86592487570622], [12.835239999999999, 55.8598652], [12.833726285714283, 55.855728]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_78bcb4eade493a04630e27bab3078b73.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 80<br>
+                    <b>Unique Ships:</b> 10<br>
+                    <b>Avg. Duration (h):</b> 5.9<br>
+                    <b>Total Stops:</b> 22
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_78bcb4eade493a04630e27bab3078b73.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_8de7fecccc27ec2f0d92450419c9dbf0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_8de7fecccc27ec2f0d92450419c9dbf0_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8de7fecccc27ec2f0d92450419c9dbf0 = L.geoJson(null, {
+                onEachFeature: geo_json_8de7fecccc27ec2f0d92450419c9dbf0_onEachFeature,
+            
+                style: geo_json_8de7fecccc27ec2f0d92450419c9dbf0_styler,
+            ...{
+}
+        });
+
+        function geo_json_8de7fecccc27ec2f0d92450419c9dbf0_add (data) {
+            geo_json_8de7fecccc27ec2f0d92450419c9dbf0
+                .addData(data);
+        }
+            geo_json_8de7fecccc27ec2f0d92450419c9dbf0_add({"features": [{"geometry": {"coordinates": [[[12.270314544825885, 57.058626728821935], [12.272528801916932, 57.05923424707135], [12.273556740083682, 57.0592594107113], [12.273890341168572, 57.05921628760913], [12.274407266666666, 57.05884266666667], [12.274385588235294, 57.058824529411766], [12.270314544825885, 57.058626728821935]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8de7fecccc27ec2f0d92450419c9dbf0.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 81<br>
+                    <b>Unique Ships:</b> 11<br>
+                    <b>Avg. Duration (h):</b> 10.0<br>
+                    <b>Total Stops:</b> 18
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_8de7fecccc27ec2f0d92450419c9dbf0.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_f6504a71910fe1265edc173c2a16067e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_f6504a71910fe1265edc173c2a16067e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_f6504a71910fe1265edc173c2a16067e = L.geoJson(null, {
+                onEachFeature: geo_json_f6504a71910fe1265edc173c2a16067e_onEachFeature,
+            
+                style: geo_json_f6504a71910fe1265edc173c2a16067e_styler,
+            ...{
+}
+        });
+
+        function geo_json_f6504a71910fe1265edc173c2a16067e_add (data) {
+            geo_json_f6504a71910fe1265edc173c2a16067e
+                .addData(data);
+        }
+            geo_json_f6504a71910fe1265edc173c2a16067e_add({"features": [{"geometry": {"coordinates": [[[11.649114370607027, 57.68138450798722], [11.64848131372549, 57.68198035294118], [11.649939749999998, 57.68284640789474], [11.649114370607027, 57.68138450798722]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_f6504a71910fe1265edc173c2a16067e.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 82<br>
+                    <b>Unique Ships:</b> 3<br>
+                    <b>Avg. Duration (h):</b> 5.0<br>
+                    <b>Total Stops:</b> 8
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_f6504a71910fe1265edc173c2a16067e.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_820614384f3ab6ff7e39116dc6fa5e6e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_820614384f3ab6ff7e39116dc6fa5e6e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_820614384f3ab6ff7e39116dc6fa5e6e = L.geoJson(null, {
+                onEachFeature: geo_json_820614384f3ab6ff7e39116dc6fa5e6e_onEachFeature,
+            
+                style: geo_json_820614384f3ab6ff7e39116dc6fa5e6e_styler,
+            ...{
+}
+        });
+
+        function geo_json_820614384f3ab6ff7e39116dc6fa5e6e_add (data) {
+            geo_json_820614384f3ab6ff7e39116dc6fa5e6e
+                .addData(data);
+        }
+            geo_json_820614384f3ab6ff7e39116dc6fa5e6e_add({"features": [{"geometry": {"coordinates": [[[14.359426624223602, 55.55466708850932], [14.3583832, 55.5558077], [14.358180742424244, 55.55603066666667], [14.358088618941505, 55.55634772423399], [14.358041478945726, 55.55677884466625], [14.358988371294853, 55.55640006864273], [14.359323229129663, 55.555780621669626], [14.359426624223602, 55.55466708850932]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_820614384f3ab6ff7e39116dc6fa5e6e.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 83<br>
+                    <b>Unique Ships:</b> 7<br>
+                    <b>Avg. Duration (h):</b> 13.9<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_820614384f3ab6ff7e39116dc6fa5e6e.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+    
+        function geo_json_03dd97f4fb7e377154eede7294c7f38e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "red", "fillOpacity": 0.45, "weight": 1.5};
+            }
+        }
+
+        function geo_json_03dd97f4fb7e377154eede7294c7f38e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_03dd97f4fb7e377154eede7294c7f38e = L.geoJson(null, {
+                onEachFeature: geo_json_03dd97f4fb7e377154eede7294c7f38e_onEachFeature,
+            
+                style: geo_json_03dd97f4fb7e377154eede7294c7f38e_styler,
+            ...{
+}
+        });
+
+        function geo_json_03dd97f4fb7e377154eede7294c7f38e_add (data) {
+            geo_json_03dd97f4fb7e377154eede7294c7f38e
+                .addData(data);
+        }
+            geo_json_03dd97f4fb7e377154eede7294c7f38e_add({"features": [{"geometry": {"coordinates": [[[12.933298446153847, 55.410698569230775], [12.932749865900384, 55.411006214559386], [12.932750184713376, 55.41100728343949], [12.933187700000001, 55.410914735714286], [12.933305121621622, 55.41071397297298], [12.933298446153847, 55.410698569230775]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_03dd97f4fb7e377154eede7294c7f38e.bindTooltip(
+                `<div>
+                     
+                    <b>Cluster ID:</b> 84<br>
+                    <b>Unique Ships:</b> 3<br>
+                    <b>Avg. Duration (h):</b> 7.4<br>
+                    <b>Total Stops:</b> 9
+                    
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_03dd97f4fb7e377154eede7294c7f38e.addTo(map_a785d152c79ca6c11025979a2f299403);
+        
+</script>
+</html>

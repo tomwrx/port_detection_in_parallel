@@ -1,0 +1,5 @@
+__pycache__/
+*.ipynb_checkpoints
+/data
+port_detection_pbi.pbix
+port_detection_eda.ipynb
