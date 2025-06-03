@@ -1,0 +1,23 @@
+============================================================
+PORT & SHIP DISTRIBUTION ANALYSIS SUMMARY
+============================================================
+Analysis Date: 2025-06-03 21:21
+
+PORT SIZE DISTRIBUTION:
+  • Total port clusters detected: 85
+  • Small (1-10) ports: 52 (61.2%)
+  • Medium (11-25) ports: 24 (28.2%)
+  • Large (26-50) ports: 6 (7.1%)
+  • Major (50+) ports: 3 (3.5%)
+
+SHIP TYPE DISTRIBUTION:
+  • Total stop events analyzed: 1713
+  • Number of different ship types: 19
+  • Top 5 ship types:
+    1. Undefined: 783 stops (45.7%)
+    2. Fishing: 134 stops (7.8%)
+    3. Pleasure: 109 stops (6.4%)
+    4. Passenger: 108 stops (6.3%)
+    5. Cargo: 104 stops (6.1%)
+
+============================================================
